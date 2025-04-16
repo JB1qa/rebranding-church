@@ -508,12 +508,14 @@ p {
   width: 34px;
   height: 34px;
   fill: var(--color-link-light);
+  transition: 0.3s;
 }
 
 .socials__icon:hover {
   width: 34px;
   height: 34px;
   fill: var(--color-link-dark);
+  transform: scale(1.05);
 }
 
 .copy {
