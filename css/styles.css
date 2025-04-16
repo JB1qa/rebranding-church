@@ -143,13 +143,23 @@ p {
 
 /*Hero Section*/
 .hero-section {
+  position: relative;
+  padding: 300px 0;
+}
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-image: linear-gradient(to bottom, rgba(16, 18, 26, 0.6)),
     url(../images/header-banner.png);
   background-color: var(--color-bcg-dark);
-
-  padding: 300px 0;
   background-position: center;
   background-size: cover;
+  filter: blur(3px);
+  z-index: -1;
 }
 
 .hero-section__title {
