@@ -418,6 +418,7 @@ p {
 
 .serv:hover {
   transform: scale(1.03);
+  z-index: 1;
 }
 
 .serv-grid {
@@ -428,7 +429,7 @@ p {
   opacity: 0.5;
 }
 
-.serv-grid:hover {
+.serv:hover .serv-grid {
   opacity: 1;
 }
 
