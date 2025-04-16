@@ -45,7 +45,6 @@
               <button class="details" type="button">
                 <span class="details__text">Дізнайся більше </span>
 
-                <!--  -->
                 <svg
                   class="details__icon icon icon-arrow-thin-right"
                   viewBox="0 0 24 24"
@@ -54,8 +53,6 @@
                     d="M16.172 9l-6.071-6.071 1.414-1.414 8.485 8.485-8.485 8.485-1.414-1.414 6.071-6.071h-16.172v-2z"
                   ></path>
                 </svg>
-
-                <!--  -->
               </button>
             </a>
           </div>
@@ -309,11 +306,12 @@
               ></path>
             </svg>
           </div>
-          <div class="copy">Церква Відродження 2025</div>
+          <div class="copy">Церква Відродження <span id="year"></span></div>
         </div>
       </div>
-
-      <div class="support"></div>
     </footer>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
