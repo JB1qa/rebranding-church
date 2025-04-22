@@ -17,7 +17,7 @@
               <li><a href="#service-section">Служіння</a></li>
               <li><a href="#contacts-section">Контакти</a></li>
             </ul>
-            <a class="header-logo" href="#"
+            <a class="header-logo" href="./"
               ><img
                 src="./images/logo-png.png"
                 alt="Church Logo"
@@ -133,26 +133,41 @@
           <h1 class="evidence2-section__title">
             Віра — це не втеча від реальності, а сила пройти її разом з Христом
           </h1>
-          <div class="evidence2-quotation">
-            <p class="evidence2-section__text">
-              "Ми не втрачаємо радості і надії, бо знаємо: Христос — наша скеля,
-              і Його Церква продовжує світити навіть у найтемніші дні." -
-              <span class="quot_autor">Пастор, Яків Бринза</span>
-            </p>
-            <p class="evidence2-section__text">
-              "Молодь шукає справжнього — і ми показуємо їм, що справжнє життя,
-              радість і сила є тільки в Христі." -
-              <span class="quot_autor"
-                >Молодіжний лідер, Антоніо Тортоса-Кузнецов</span
-              >
-            </p>
-            <p class="evidence2-section__text">
-              "Навіть у зрілому віці Бог продовжує писати з нами нові історії
-              віри, любові й служіння." -
-              <span class="quot_autor"
-                >Служителька для людей 55+, Світлана Кравецька</span
-              >
-            </p>
+          <div class="evidence2-details">
+            <div class="evidence2-video">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/e2edAiR-x9U?si=qb2hm_jADLu2N6NM"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="evidence2-quotation">
+              <p class="evidence2-section__text">
+                "Ми не втрачаємо радості і надії, бо знаємо: Христос — наша
+                скеля, і Його Церква продовжує світити навіть у найтемніші дні."
+                -
+                <span class="quot_autor">Пастор, Яків Бринза</span>
+              </p>
+              <p class="evidence2-section__text">
+                "Молодь шукає справжнього — і ми показуємо їм, що справжнє
+                життя, радість і сила є тільки в Христі." -
+                <span class="quot_autor"
+                  >Молодіжний лідер, Антоніо Тортоса-Кузнецов</span
+                >
+              </p>
+              <p class="evidence2-section__text">
+                "Навіть у зрілому віці Бог продовжує писати з нами нові історії
+                віри, любові й служіння." -
+                <span class="quot_autor"
+                  >Служителька для людей 55+, Світлана Кравецька</span
+                >
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -205,8 +220,15 @@
             <p class="serv-description">Недільні зібрання</p>
           </li>
           <li class="serv">
-            <img src="./images/grid.png" alt="grid1" class="serv-grid" />
-            <p class="serv-description">Description</p>
+            <button
+              class="libutton open-modal"
+              data-target="modal1"
+              type="button"
+            >
+              <img src="./images/grid.png" alt="grid1" class="serv-grid1" />
+
+              <p class="serv-description1">Недільні зібрання (КЛАЦНИ МЕНЕ)</p>
+            </button>
           </li>
         </ul>
       </section>
@@ -221,7 +243,7 @@
                   <a
                     href="https://maps.app.goo.gl/ULw9HTBE6cBQzo897"
                     target="_blank"
-                    >м. Запоріжжя, вулиця Перемоги, 83</a
+                    >м. Запоріжжя, вул. Перемоги, 83</a
                   >
                 </p>
                 <p class="contacts__text">
@@ -236,9 +258,27 @@
                 </p>
               </div>
               <div class="support-button">
-                <button class="details" type="button">
-                  <span class="details__text">Підтримати нас </span>
-                </button>
+                <form
+                  method="POST"
+                  accept-charset="utf-8"
+                  action="https://www.liqpay.ua/api/3/checkout"
+                  style="text-align: center"
+                  target="_blank"
+                >
+                  <input
+                    type="hidden"
+                    name="data"
+                    value="eyJ2ZXJzaW9uIjozLCJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiIwLjAwIiwiY3VycmVuY3kiOiJVQUgiLCJkZXNjcmlwdGlvbiI6ItCf0L7QttC10YDRgtCy0YPQstCw0L3QvdGPIiwicHVibGljX2tleSI6Imk2MzU2MzkxMjY5NCIsImxhbmd1YWdlIjoidWsifQ=="
+                  />
+                  <input
+                    type="hidden"
+                    name="signature"
+                    value="KT1uREo0GxDkA9OVNn48Lr6orAI="
+                  />
+                  <button class="details">
+                    <span class="details__text">Підтримати нас </span>
+                  </button>
+                </form>
               </div>
             </div>
             <div class="contacts__map">
@@ -310,8 +350,64 @@
         </div>
       </div>
     </footer>
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+    <!-- <div class="modalw is-hidden">
+      <div class="modal">
+        <button type="button" class="modal-btn-close">
+          <svg
+            class="modal-btn-close__icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 34 34"
+          >
+            <path
+              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+            ></path>
+          </svg>
+        </button>
+        <h2 class="modal-header__text">Підтримайте нашу церкву</h2>
+
+        <form name="modal-form" class="modal-form"></form>
+      </div>
+    </div> -->
+
+    <!-- <div id="support" class="modal is-hidden">
+      <div class="modal-content">
+        <button type="button" class="close">
+          <svg
+            class="modal-btn-close__icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 34 34"
+          >
+            <path
+              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+            ></path>
+          </svg>
+        </button>
+        <h2 class="modal-header__text">Підтримайте нашу церкву</h2>
+
+        <form name="modal-form" class="modal-form">
+          <form name="donation-form" class="modal-form"></form>
+        </form>
+      </div>
+    </div> -->
+
+    <div id="modal1" class="modal is-hidden">
+      <div class="modal-content-serv">
+        <div class="modal-desc">
+          <img src="./images/grid.png" alt="grid1" class="serv-modal" />
+          <svg
+            class="modal-btn-close__icon close serv-close"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 34 34"
+          >
+            <path
+              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+            ></path>
+          </svg>
+          <h1 class="serv-h">Недільне зібрання</h1>
+        </div>
+      </div>
+    </div>
+    <script src="./js/footer.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
