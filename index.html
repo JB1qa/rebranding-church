@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Церква Відродження</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -24,6 +28,45 @@
                 width="200"
                 height="auto"
             /></a>
+            <button class="burger__button menu-btn-open" type="button">
+              <svg
+                class="burger__icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 34 34"
+              >
+                <path
+                  d="M0 3h20v2h-20v-2zM0 9h20v2h-20v-2zM0 15h20v2h-20v-2z"
+                ></path>
+              </svg>
+            </button>
+            <div class="mobile-menu">
+             <div class="mobile-menu__content">
+               <button class="burger__button menu-btn-close" type="button">
+                <svg
+                  class="burger__icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 34 34"
+                >
+                  <path
+                    d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+                  ></path>
+                </svg>
+              </button>
+              <a class="header-logo mob" href="./"
+                ><img
+                  src="./images/logo-png.png"
+                  alt="Church Logo"
+                  width="200"
+                  height="auto"
+              /></a>
+              <ul class="mob-list">
+                <li><a href="#about-section">Про нас</a></li>
+                <li><a href="#evidence-section">Свідчення</a></li>
+                <li><a href="#service-section">Служіння</a></li>
+                <li><a href="#contacts-section">Контакти</a></li>
+              </ul>
+             </div>
+            </div>
           </nav>
         </div>
       </div>
@@ -40,7 +83,7 @@
             <p class="p_light mb">Запоріжжя</p>
             <p class="p_light">вул. Перемоги, 83</p>
           </div>
-          <div class="button">
+          <div class="button m_button">
             <a href="#about-section">
               <button class="details" type="button">
                 <span class="details__text">Дізнайся більше </span>
@@ -61,6 +104,7 @@
       <section class="about-section" id="about-section">
         <div class="container">
           <h1 class="about-section__title">Наші цінності</h1>
+
           <ul class="about-section_list">
             <li>
               <article class="about-card">
@@ -153,6 +197,7 @@
                 -
                 <span class="quot_autor">Пастор, Яків Бринза</span>
               </p>
+              <hr />
               <p class="evidence2-section__text">
                 "Молодь шукає справжнього — і ми показуємо їм, що справжнє
                 життя, радість і сила є тільки в Христі." -
@@ -160,6 +205,7 @@
                   >Молодіжний лідер, Антоніо Тортоса-Кузнецов</span
                 >
               </p>
+              <hr />
               <p class="evidence2-section__text">
                 "Навіть у зрілому віці Бог продовжує писати з нами нові історії
                 віри, любові й служіння." -
@@ -177,62 +223,167 @@
         <ul class="grid">
           <li class="serv">
             <img src="./images/grid.png" alt="grid1" class="serv-grid" />
-            <p class="serv-description">Дитяча недільна школа</p>
+            <div class="serv-description">
+              <p>Дитяча недільна школа</p>
+              <button
+                type="button"
+                class="open-modal serv-button"
+                data-target="modal1"
+              >
+                Детальніше
+              </button>
+            </div>
           </li>
           <li class="serv">
             <img src="./images/grid.png" alt="grid1" class="serv-grid" />
-            <p class="serv-description">Підлітковий клуб YL</p>
+            <div class="serv-description">
+              <p>Підлітковий клуб YL</p>
+              <button
+                type="button"
+                class="open-modal serv-button"
+                data-target="modal1"
+              >
+                Детальніше
+              </button>
+            </div>
           </li>
           <li class="serv">
             <img src="./images/grid.png" alt="grid1" class="serv-grid" />
-            <p class="serv-description">Молодіжні зустрічі Revival</p>
+            <div class="serv-description">
+              <p>Молодіжні зустрічі Revival</p>
+              <button
+                type="button"
+                class="open-modal serv-button"
+                data-target="modal1"
+              >
+                Детальніше
+              </button>
+            </div>
           </li>
           <li class="serv">
             <img src="./images/grid.png" alt="grid1" class="serv-grid" />
-            <p class="serv-description">Сімейне служіння</p>
+            <div class="serv-description">
+              <p>Сімейне служіння</p>
+              <button
+                type="button"
+                class="open-modal serv-button"
+                data-target="modal1"
+              >
+                Детальніше
+              </button>
+            </div>
           </li>
           <li class="serv">
             <img src="./images/grid.png" alt="grid1" class="serv-grid" />
-            <p class="serv-description">Зустрічі для сімей військових</p>
+            <div class="serv-description">
+              <p>Зустрічі для сімей військових</p>
+              <button
+                type="button"
+                class="open-modal serv-button"
+                data-target="modal1"
+              >
+                Детальніше
+              </button>
+            </div>
           </li>
-          <li class="serv">
-            <img src="./images/grid.png" alt="grid1" class="serv-grid" />
-            <p class="serv-description">Молитовні зустрічі</p>
-          </li>
-          <li class="serv">
-            <img src="./images/grid.png" alt="grid1" class="serv-grid" />
-            <p class="serv-description">Молодіжні конференції</p>
-          </li>
-          <li class="serv">
-            <img src="./images/grid.png" alt="grid1" class="serv-grid" />
-            <p class="serv-description">Жіночі та чоловічі клуби</p>
-          </li>
-          <li class="serv">
-            <img src="./images/grid.png" alt="grid1" class="serv-grid" />
-            <p class="serv-description">Служіння 55+</p>
-          </li>
-          <li class="serv">
-            <img src="./images/grid.png" alt="grid1" class="serv-grid" />
-            <p class="serv-description">Малі групи розбору Біблі</p>
-          </li>
-          <li class="serv">
-            <img src="./images/grid.png" alt="grid1" class="serv-grid" />
-            <p class="serv-description">Недільні зібрання</p>
-          </li>
-          <li class="serv">
-            <button
-              class="libutton open-modal"
-              data-target="modal1"
-              type="button"
-            >
-              <img src="./images/grid.png" alt="grid1" class="serv-grid1" />
 
-              <p class="serv-description1">Недільні зібрання (КЛАЦНИ МЕНЕ)</p>
-            </button>
+          <li class="serv">
+            <img src="./images/grid.png" alt="grid1" class="serv-grid" />
+            <div class="serv-description">
+              <p>Молитовні зустрічі</p>
+              <button
+                type="button"
+                class="open-modal serv-button"
+                data-target="modal1"
+              >
+                Детальніше
+              </button>
+            </div>
+          </li>
+
+          <li class="serv">
+            <img src="./images/grid.png" alt="grid1" class="serv-grid" />
+            <div class="serv-description">
+              <p>Молодіжні конференції</p>
+              <button
+                type="button"
+                class="open-modal serv-button"
+                data-target="modal1"
+              >
+                Детальніше
+              </button>
+            </div>
+          </li>
+          <li class="serv">
+            <img src="./images/grid.png" alt="grid1" class="serv-grid" />
+            <div class="serv-description">
+              <p>Жіночі клуби</p>
+              <button
+                type="button"
+                class="open-modal serv-button"
+                data-target="modal1"
+              >
+                Детальніше
+              </button>
+            </div>
+          </li>
+          <li class="serv">
+            <img src="./images/grid.png" alt="grid1" class="serv-grid" />
+            <div class="serv-description">
+              <p>Чоловічі клуби</p>
+              <button
+                type="button"
+                class="open-modal serv-button"
+                data-target="modal1"
+              >
+                Детальніше
+              </button>
+            </div>
+          </li>
+          <li class="serv">
+            <img src="./images/grid.png" alt="grid1" class="serv-grid" />
+            <div class="serv-description">
+              <p>Служіння 55+</p>
+              <button
+                type="button"
+                class="open-modal serv-button"
+                data-target="modal1"
+              >
+                Детальніше
+              </button>
+            </div>
+          </li>
+
+          <li class="serv">
+            <img src="./images/grid.png" alt="grid1" class="serv-grid" />
+            <div class="serv-description">
+              <p>Малі групи розбору Біблії</p>
+              <button
+                type="button"
+                class="open-modal serv-button"
+                data-target="modal1"
+              >
+                Детальніше
+              </button>
+            </div>
+          </li>
+
+          <li class="serv">
+            <img src="./images/grid.png" alt="grid1" class="serv-grid" />
+            <div class="serv-description">
+              <p>Недільні зібрання</p>
+              <button
+                type="button"
+                class="open-modal serv-button"
+                data-target="modal1"
+              >
+                Детальніше
+              </button>
+            </div>
           </li>
         </ul>
       </section>
-      <section class="contacts-section" id="contacts-section">
+       <section class="contacts-section" id="contacts-section">
         <div class="container">
           <div class="contacts-section__info">
             <div class="contacts__info">
@@ -284,8 +435,7 @@
             <div class="contacts__map">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2678.2479241970673!2d35.1246788767672!3d47.834790171211665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dc60ca3a201ce9%3A0x803a5068a6dcbd66!2z0YPQuy4g0J_QvtCx0LXQtNGLLCA4Mywg0JfQsNC_0L7RgNC-0LbRjNC1LCDQl9Cw0L_QvtGA0L7QttGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2OTAwMA!5e0!3m2!1sru!2sua!4v1744787223686!5m2!1sru!2sua"
-                width="600"
-                height="450"
+                width="100%" height="100%"
                 style="border: 0"
                 allowfullscreen=""
                 loading="lazy"
@@ -300,114 +450,92 @@
       <div class="container">
         <div class="footer__section">
           <div class="socials">
-            <svg
-              class="socials__icon"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 34 34"
+            <a href="https://www.facebook.com/RevivalChurchZp" target="_blank">
+              <svg
+                class="socials__icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 34 34"
+              >
+                <path
+                  d="M34 17C34 7.61016 26.3898 0 17 0C7.61016 0 0 7.61016 0 17C0 26.3898 7.61016 34 17 34C17.0996 34 17.1992 34 17.2988 33.9934V20.7652H13.6465V16.5086H17.2988V13.3742C17.2988 9.7418 19.5168 7.76289 22.7574 7.76289C24.3113 7.76289 25.6461 7.87578 26.0312 7.92891V11.7273H23.8C22.0402 11.7273 21.6949 12.5641 21.6949 13.7926V16.502H25.9117L25.3605 20.7586H21.6949V33.3426C28.8004 31.3039 34 24.7629 34 17Z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="https://www.instagram.com/revivall.church/"
+              target="_blank"
             >
-              <path
-                d="M34 17C34 7.61016 26.3898 0 17 0C7.61016 0 0 7.61016 0 17C0 26.3898 7.61016 34 17 34C17.0996 34 17.1992 34 17.2988 33.9934V20.7652H13.6465V16.5086H17.2988V13.3742C17.2988 9.7418 19.5168 7.76289 22.7574 7.76289C24.3113 7.76289 25.6461 7.87578 26.0312 7.92891V11.7273H23.8C22.0402 11.7273 21.6949 12.5641 21.6949 13.7926V16.502H25.9117L25.3605 20.7586H21.6949V33.3426C28.8004 31.3039 34 24.7629 34 17Z"
-              ></path>
-            </svg>
-            <svg
-              class="socials__icon"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 35 34"
-            >
-              <path
-                d="M20.8496 17C20.8496 18.7971 19.35 20.2539 17.5 20.2539C15.65 20.2539 14.1504 18.7971 14.1504 17C14.1504 15.2029 15.65 13.7461 17.5 13.7461C19.35 13.7461 20.8496 15.2029 20.8496 17Z"
-              ></path>
-              <path
-                d="M25.3336 11.2429C25.1725 10.819 24.9157 10.4354 24.5819 10.1205C24.2577 9.79621 23.863 9.54667 23.4264 9.39025C23.0724 9.25666 22.5404 9.09765 21.5607 9.05433C20.5009 9.00738 20.1831 8.99726 17.5 8.99726C14.8166 8.99726 14.4989 9.00712 13.4393 9.05407C12.4596 9.09765 11.9274 9.25666 11.5736 9.39025C11.137 9.54667 10.742 9.79621 10.4181 10.1205C10.0843 10.4354 9.82746 10.8188 9.66618 11.2429C9.52866 11.5868 9.36497 12.1038 9.32037 13.0556C9.27204 14.0849 9.26163 14.3935 9.26163 17.0003C9.26163 19.6067 9.27204 19.9154 9.32037 20.9449C9.36497 21.8967 9.52866 22.4134 9.66618 22.7574C9.82746 23.1815 10.0841 23.5649 10.4179 23.8798C10.742 24.204 11.1367 24.4536 11.5733 24.61C11.9274 24.7438 12.4596 24.9029 13.4393 24.9462C14.4989 24.9931 14.8164 25.003 17.4997 25.003C20.1834 25.003 20.5011 24.9931 21.5604 24.9462C22.5402 24.9029 23.0724 24.7438 23.4264 24.61C24.3028 24.2816 24.9955 23.6087 25.3336 22.7574C25.4711 22.4134 25.6348 21.8967 25.6796 20.9449C25.728 19.9154 25.7381 19.6067 25.7381 17.0003C25.7381 14.3935 25.728 14.0849 25.6796 13.0556C25.635 12.1038 25.4713 11.5868 25.3336 11.2429ZM17.5 22.0126C14.65 22.0126 12.3397 19.7686 12.3397 17C12.3397 14.2314 14.65 11.9874 17.5 11.9874C20.3497 11.9874 22.6601 14.2314 22.6601 17C22.6601 19.7686 20.3497 22.0126 17.5 22.0126ZM22.8641 12.9606C22.1981 12.9606 21.6582 12.4361 21.6582 11.7892C21.6582 11.1422 22.1981 10.6177 22.8641 10.6177C23.53 10.6177 24.07 11.1422 24.07 11.7892C24.0697 12.4361 23.53 12.9606 22.8641 12.9606Z"
-              ></path>
-              <path
-                d="M17.5 0C7.83649 0 0 7.61259 0 17C0 26.3874 7.83649 34 17.5 34C27.1635 34 35 26.3874 35 17C35 7.61259 27.1635 0 17.5 0ZM27.4882 21.0246C27.4396 22.0637 27.2695 22.7732 27.0212 23.3942C26.4991 24.7055 25.4321 25.742 24.0823 26.2491C23.4433 26.4904 22.7127 26.6554 21.6432 26.7028C20.5716 26.7503 20.2293 26.7617 17.5003 26.7617C14.771 26.7617 14.4289 26.7503 13.357 26.7028C12.2876 26.6554 11.557 26.4904 10.918 26.2491C10.2472 26.004 9.64001 25.6198 9.13799 25.1231C8.6269 24.6357 8.23143 24.0455 7.97909 23.3942C7.73075 22.7735 7.56065 22.0637 7.51205 21.0248C7.46265 19.9836 7.45117 19.6511 7.45117 17C7.45117 14.3489 7.46265 14.0164 7.51179 12.9754C7.56039 11.9363 7.73022 11.2268 7.97855 10.6058C8.2309 9.95445 8.62663 9.36432 9.13799 8.87691C9.63974 8.38016 10.2472 7.99599 10.9177 7.75085C11.557 7.50961 12.2873 7.34464 13.357 7.29716C14.4286 7.24969 14.771 7.23828 17.5 7.23828C20.229 7.23828 20.5714 7.24969 21.643 7.29742C22.7127 7.34464 23.443 7.50961 24.0823 7.7506C24.7528 7.99573 25.3603 8.38016 25.8623 8.87691C26.3734 9.36458 26.7691 9.95445 27.0212 10.6058C27.2698 11.2268 27.4396 11.9363 27.4885 12.9754C27.5373 14.0164 27.5488 14.3489 27.5488 17C27.5488 19.6511 27.5373 19.9836 27.4882 21.0246Z"
-              ></path>
-            </svg>
-            <svg
-              class="socials__icon"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 35 34"
-            >
-              <path
-                d="M15.3202 20.1849L21.0128 17L15.3202 13.8151V20.1849Z"
-              ></path>
-              <path
-                d="M17.5 0C7.83649 0 0 7.61259 0 17C0 26.3874 7.83649 34 17.5 34C27.1635 34 35 26.3874 35 17C35 7.61259 27.1635 0 17.5 0ZM28.4348 17.0174C28.4348 17.0174 28.4348 20.4651 27.9846 22.1275C27.7323 23.0375 26.9937 23.755 26.0569 23.9999C24.3456 24.4375 17.5 24.4375 17.5 24.4375C17.5 24.4375 10.6723 24.4375 8.94306 23.9825C8.00632 23.7376 7.26772 23.0199 7.01538 22.1099C6.5649 20.4651 6.5649 17 6.5649 17C6.5649 17 6.5649 13.5526 7.01538 11.8901C7.26746 10.9801 8.02422 10.245 8.94306 10.0001C10.6544 9.5625 17.5 9.5625 17.5 9.5625C17.5 9.5625 24.3456 9.5625 26.0569 10.0175C26.9937 10.2624 27.7323 10.9801 27.9846 11.8901C28.453 13.5526 28.4348 17.0174 28.4348 17.0174Z"
-              ></path>
-            </svg>
-            <svg
-              class="socials__icon"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 34 34"
-            >
-              <path
-                d="M17 34C26.3911 34 34 26.3911 34 17C34 7.60892 26.3911 0 17 0C7.60892 0 0 7.60892 0 17C0 26.3911 7.60892 34 17 34ZM7.77892 16.6317L24.1698 10.3119C24.9305 10.0371 25.5949 10.4975 25.3484 11.6478L25.3498 11.6464L22.559 24.7945C22.3522 25.7267 21.7983 25.9533 21.0233 25.5142L16.7733 22.3819L14.7234 24.3568C14.4967 24.5834 14.3055 24.7747 13.8663 24.7747L14.1681 20.4496L22.0447 13.3337C22.3876 13.0319 21.9682 12.8619 21.5163 13.1623L11.7824 19.2907L7.58625 17.9817C6.67533 17.6927 6.6555 17.0708 7.77892 16.6317Z"
-              ></path>
-            </svg>
+              <svg
+                class="socials__icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 35 34"
+              >
+                <path
+                  d="M20.8496 17C20.8496 18.7971 19.35 20.2539 17.5 20.2539C15.65 20.2539 14.1504 18.7971 14.1504 17C14.1504 15.2029 15.65 13.7461 17.5 13.7461C19.35 13.7461 20.8496 15.2029 20.8496 17Z"
+                ></path>
+                <path
+                  d="M25.3336 11.2429C25.1725 10.819 24.9157 10.4354 24.5819 10.1205C24.2577 9.79621 23.863 9.54667 23.4264 9.39025C23.0724 9.25666 22.5404 9.09765 21.5607 9.05433C20.5009 9.00738 20.1831 8.99726 17.5 8.99726C14.8166 8.99726 14.4989 9.00712 13.4393 9.05407C12.4596 9.09765 11.9274 9.25666 11.5736 9.39025C11.137 9.54667 10.742 9.79621 10.4181 10.1205C10.0843 10.4354 9.82746 10.8188 9.66618 11.2429C9.52866 11.5868 9.36497 12.1038 9.32037 13.0556C9.27204 14.0849 9.26163 14.3935 9.26163 17.0003C9.26163 19.6067 9.27204 19.9154 9.32037 20.9449C9.36497 21.8967 9.52866 22.4134 9.66618 22.7574C9.82746 23.1815 10.0841 23.5649 10.4179 23.8798C10.742 24.204 11.1367 24.4536 11.5733 24.61C11.9274 24.7438 12.4596 24.9029 13.4393 24.9462C14.4989 24.9931 14.8164 25.003 17.4997 25.003C20.1834 25.003 20.5011 24.9931 21.5604 24.9462C22.5402 24.9029 23.0724 24.7438 23.4264 24.61C24.3028 24.2816 24.9955 23.6087 25.3336 22.7574C25.4711 22.4134 25.6348 21.8967 25.6796 20.9449C25.728 19.9154 25.7381 19.6067 25.7381 17.0003C25.7381 14.3935 25.728 14.0849 25.6796 13.0556C25.635 12.1038 25.4713 11.5868 25.3336 11.2429ZM17.5 22.0126C14.65 22.0126 12.3397 19.7686 12.3397 17C12.3397 14.2314 14.65 11.9874 17.5 11.9874C20.3497 11.9874 22.6601 14.2314 22.6601 17C22.6601 19.7686 20.3497 22.0126 17.5 22.0126ZM22.8641 12.9606C22.1981 12.9606 21.6582 12.4361 21.6582 11.7892C21.6582 11.1422 22.1981 10.6177 22.8641 10.6177C23.53 10.6177 24.07 11.1422 24.07 11.7892C24.0697 12.4361 23.53 12.9606 22.8641 12.9606Z"
+                ></path>
+                <path
+                  d="M17.5 0C7.83649 0 0 7.61259 0 17C0 26.3874 7.83649 34 17.5 34C27.1635 34 35 26.3874 35 17C35 7.61259 27.1635 0 17.5 0ZM27.4882 21.0246C27.4396 22.0637 27.2695 22.7732 27.0212 23.3942C26.4991 24.7055 25.4321 25.742 24.0823 26.2491C23.4433 26.4904 22.7127 26.6554 21.6432 26.7028C20.5716 26.7503 20.2293 26.7617 17.5003 26.7617C14.771 26.7617 14.4289 26.7503 13.357 26.7028C12.2876 26.6554 11.557 26.4904 10.918 26.2491C10.2472 26.004 9.64001 25.6198 9.13799 25.1231C8.6269 24.6357 8.23143 24.0455 7.97909 23.3942C7.73075 22.7735 7.56065 22.0637 7.51205 21.0248C7.46265 19.9836 7.45117 19.6511 7.45117 17C7.45117 14.3489 7.46265 14.0164 7.51179 12.9754C7.56039 11.9363 7.73022 11.2268 7.97855 10.6058C8.2309 9.95445 8.62663 9.36432 9.13799 8.87691C9.63974 8.38016 10.2472 7.99599 10.9177 7.75085C11.557 7.50961 12.2873 7.34464 13.357 7.29716C14.4286 7.24969 14.771 7.23828 17.5 7.23828C20.229 7.23828 20.5714 7.24969 21.643 7.29742C22.7127 7.34464 23.443 7.50961 24.0823 7.7506C24.7528 7.99573 25.3603 8.38016 25.8623 8.87691C26.3734 9.36458 26.7691 9.95445 27.0212 10.6058C27.2698 11.2268 27.4396 11.9363 27.4885 12.9754C27.5373 14.0164 27.5488 14.3489 27.5488 17C27.5488 19.6511 27.5373 19.9836 27.4882 21.0246Z"
+                ></path>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com/@RevivalChurchZp" target="_blank">
+              <svg
+                class="socials__icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 35 34"
+              >
+                <path
+                  d="M15.3202 20.1849L21.0128 17L15.3202 13.8151V20.1849Z"
+                ></path>
+                <path
+                  d="M17.5 0C7.83649 0 0 7.61259 0 17C0 26.3874 7.83649 34 17.5 34C27.1635 34 35 26.3874 35 17C35 7.61259 27.1635 0 17.5 0ZM28.4348 17.0174C28.4348 17.0174 28.4348 20.4651 27.9846 22.1275C27.7323 23.0375 26.9937 23.755 26.0569 23.9999C24.3456 24.4375 17.5 24.4375 17.5 24.4375C17.5 24.4375 10.6723 24.4375 8.94306 23.9825C8.00632 23.7376 7.26772 23.0199 7.01538 22.1099C6.5649 20.4651 6.5649 17 6.5649 17C6.5649 17 6.5649 13.5526 7.01538 11.8901C7.26746 10.9801 8.02422 10.245 8.94306 10.0001C10.6544 9.5625 17.5 9.5625 17.5 9.5625C17.5 9.5625 24.3456 9.5625 26.0569 10.0175C26.9937 10.2624 27.7323 10.9801 27.9846 11.8901C28.453 13.5526 28.4348 17.0174 28.4348 17.0174Z"
+                ></path>
+              </svg>
+            </a>
+            <a href="https://t.me/revivlchurch" target="_blank">
+              <svg
+                class="socials__icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 34 34"
+              >
+                <path
+                  d="M17 34C26.3911 34 34 26.3911 34 17C34 7.60892 26.3911 0 17 0C7.60892 0 0 7.60892 0 17C0 26.3911 7.60892 34 17 34ZM7.77892 16.6317L24.1698 10.3119C24.9305 10.0371 25.5949 10.4975 25.3484 11.6478L25.3498 11.6464L22.559 24.7945C22.3522 25.7267 21.7983 25.9533 21.0233 25.5142L16.7733 22.3819L14.7234 24.3568C14.4967 24.5834 14.3055 24.7747 13.8663 24.7747L14.1681 20.4496L22.0447 13.3337C22.3876 13.0319 21.9682 12.8619 21.5163 13.1623L11.7824 19.2907L7.58625 17.9817C6.67533 17.6927 6.6555 17.0708 7.77892 16.6317Z"
+                ></path>
+              </svg>
+            </a>
           </div>
           <div class="copy">Церква Відродження <span id="year"></span></div>
         </div>
       </div>
-    </footer>
-    <!-- <div class="modalw is-hidden">
-      <div class="modal">
-        <button type="button" class="modal-btn-close">
-          <svg
-            class="modal-btn-close__icon"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 34 34"
-          >
-            <path
-              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
-            ></path>
-          </svg>
-        </button>
-        <h2 class="modal-header__text">Підтримайте нашу церкву</h2>
+    </footer> 
 
-        <form name="modal-form" class="modal-form"></form>
-      </div>
-    </div> -->
-
-    <!-- <div id="support" class="modal is-hidden">
-      <div class="modal-content">
-        <button type="button" class="close">
-          <svg
-            class="modal-btn-close__icon"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 34 34"
-          >
-            <path
-              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
-            ></path>
-          </svg>
-        </button>
-        <h2 class="modal-header__text">Підтримайте нашу церкву</h2>
-
-        <form name="modal-form" class="modal-form">
-          <form name="donation-form" class="modal-form"></form>
-        </form>
-      </div>
-    </div> -->
-
-    <div id="modal1" class="modal is-hidden">
-      <div class="modal-content-serv">
-        <div class="modal-desc">
-          <img src="./images/grid.png" alt="grid1" class="serv-modal" />
-          <svg
-            class="modal-btn-close__icon close serv-close"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 34 34"
-          >
-            <path
-              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
-            ></path>
-          </svg>
-          <h1 class="serv-h">Недільне зібрання</h1>
+      <div id="modal1" class="modal is-hidden">
+        <div class="modal-content-serv">
+          <div class="modal-desc">
+            <img src="./images/grid.png" alt="grid1" class="serv-modal" />
+            <svg
+              class="modal-btn-close__icon close serv-close"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 34 34"
+            >
+              <path
+                d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+              ></path>
+            </svg>
+            <h1 class="serv-h">Недільне зібрання</h1>
+            <p>sdasdjalkdjaslkdjaslkdjaslkdjaslkdajsdl</p>
+            <p>Contacts:</p>
+          </div>
         </div>
       </div>
-    </div>
-    <script src="./js/footer.js"></script>
-    <script src="./js/modal.js"></script>
+      <script src="./js/footer.js"></script>
+      <script src="./js/modal.js"></script>
+      <script src="./js/mobile-menu.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script src="./js/slider.js"></script>
+    </main>
   </body>
 </html>
