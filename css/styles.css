@@ -49,9 +49,18 @@
   --color-bcg-light: #4caf50;
   --color-bcg-light2: #ffffff;
   --color-bcg-dark: #10121a;
+  --screen-mob: 375px;
+  --screen-tab: 768px;
+  --screen-desk: 960px;
 }
 
 /*Base*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -124,6 +133,36 @@ p {
   z-index: 1;
 }
 
+.burger__button {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  display: none;
+  @media screen and (max-width: 960px) {
+    display: inline;
+  }
+}
+
+.burger__button.menu-btn-close {
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  right: 0;
+}
+
+.header-logo.mob {
+  display: flex;
+
+  justify-content: center;
+}
+
+.burger__icon {
+  background-color: transparent;
+  fill: var(--color-bcg-light2);
+  width: 32px;
+  height: 32px;
+}
+
 .header-container {
   display: flex;
   align-items: center;
@@ -144,12 +183,53 @@ p {
   display: flex;
   gap: 64px;
   justify-content: center;
+
+  @media screen and (max-width: 960px) {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 360px;
+  height: 100%;
+  padding: 16px 24px;
+  background-color: var(--color-bcg-dark);
+  transform: translateX(100%);
+  transition: transform 0.5s;
+  z-index: 2;
+}
+
+.mobile-menu.is-open {
+  transform: translateX(0);
+  max-width: 360px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu.is-closing {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
+}
+
+.mob-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*Hero Section*/
 .hero-section {
   position: relative;
   padding: 300px 0;
+  @media screen and (max-width: 960px) {
+    padding: 150px 0;
+  }
 }
 .hero-section::after {
   content: "";
@@ -171,20 +251,42 @@ p {
   color: var(--color-font-light);
   font-size: 56px;
   margin-bottom: 0;
+  @media screen and (min-width: 475px) and (max-width: 960px) {
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+  }
+  @media screen and (max-width: 475px) {
+    display: flex;
+    justify-content: center;
+    font-size: 26px;
+  }
 }
 
 .hero-section_time {
   color: var(--color-font-light);
+  @media screen and (max-width: 960px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .p_light {
   color: var(--color-font-light);
+  @media screen and (max-width: 960px) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .mb {
   margin-bottom: 0;
+  @media screen and (max-width: 960px) {
+    display: flex;
+    justify-content: center;
+  }
 }
-
 .details {
   display: flex;
   align-items: center;
@@ -197,6 +299,20 @@ p {
   border: var(--color-link-light) 2px solid;
   font-size: 16px;
   transition: 0.3s;
+  @media screen and (max-width: 960px) {
+    justify-content: center;
+    gap: 24px;
+    @media screen and (max-width: 640px) {
+      width: 200px;
+    }
+  }
+}
+
+.m_button {
+  @media screen and (max-width: 960px) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .icon {
@@ -226,8 +342,14 @@ p {
 
 /*About section*/
 .about-section {
-  height: 600px;
+  height: 700px;
   padding: 56px;
+  position: relative;
+  z-index: 0;
+  @media screen and (max-width: 1024px) {
+    padding: 36px;
+    height: 100%;
+  }
 }
 
 .about-section__title {
@@ -236,11 +358,20 @@ p {
   padding-top: 36px;
   font-size: 36px;
   z-index: 2;
+  @media screen and (max-width: 960px) {
+    font-size: 24px;
+    text-align: center;
+  }
 }
 
 .about-section_list {
   display: flex;
   justify-content: space-around;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 .about-card {
@@ -255,6 +386,15 @@ p {
   transition: 0.3s;
   box-shadow: 1px 1px 5px var(--color-bcg-dark);
   padding: 10px;
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 16px;
+    border: 1px var(--color-bcg-light2) solid;
+  }
 }
 
 .about-card__image {
@@ -279,6 +419,9 @@ p {
     rgba(95, 95, 95, 0.368) 58.46%,
     rgba(153, 153, 153, 0.713) 90.36%
   );
+  @media screen and (max-width: 1024px) {
+    transform: none;
+  }
 }
 
 .about-card__title {
@@ -287,6 +430,9 @@ p {
   position: relative;
   z-index: 2;
   justify-content: center;
+  @media screen and (max-width: 960px) {
+    margin-bottom: 0;
+  }
 }
 
 .about-card__description {
@@ -295,6 +441,14 @@ p {
   position: relative;
   z-index: 2;
   align-items: center;
+  @media screen and (max-width: 960px) {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+.about-section__mobile {
+  display: none;
 }
 
 /* Evidence section */
@@ -305,8 +459,11 @@ p {
   position: relative;
   background-color: var(--color-bcg-light);
   overflow: hidden;
-  height: 300px;
+  height: 400px;
   padding: 56px;
+  @media screen and (max-width: 960px) {
+    height: 100%;
+  }
 }
 
 .evidence-section::before {
@@ -324,18 +481,27 @@ p {
   display: flex;
   position: relative;
   max-width: 50%;
-  z-index: 1;
+
   color: var(--color-font-light);
   text-shadow: 1px 1px 10px var(--color-bcg-dark);
+  @media screen and (max-width: 960px) {
+    font-size: 18px;
+    min-width: 100%;
+  }
 }
 
 .evidence-section__text {
   display: flex;
   position: relative;
-  z-index: 1;
+
   color: var(--color-font-light);
   text-shadow: 1px 1px 10px var(--color-bcg-dark);
   max-width: 75%;
+  @media screen and (max-width: 960px) {
+    font-size: 12px;
+    min-width: 100%;
+    text-align: justify;
+  }
 }
 
 .evidence-text {
@@ -344,7 +510,7 @@ p {
   justify-content: center;
   flex-direction: column;
   box-shadow: 1px 1px 10px var(--color-font-light);
-  z-index: 1;
+
   padding: 16px;
 }
 
@@ -354,7 +520,7 @@ p {
   justify-content: center;
   position: relative;
   overflow: hidden;
-  height: 600px;
+
   padding: 56px;
   z-index: 0;
 }
@@ -363,8 +529,18 @@ p {
   display: flex;
   align-items: center;
   gap: 40px;
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
 }
 
+hr {
+  display: inline;
+  width: 100%;
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
 .evidence2-section::before {
   content: "";
   inset: 0;
@@ -397,6 +573,17 @@ p {
   display: flex;
   font-size: 36px;
   max-width: 60%;
+  @media screen and (max-width: 1240px) {
+    max-width: 100%;
+  }
+  @media screen and (max-width: 960px) {
+    font-size: 24px;
+  }
+}
+
+.evidence2-video {
+  @media screen and (max-width: 760px) {
+  }
 }
 
 .evidence2-quotation {
@@ -409,6 +596,13 @@ p {
 .evidence2-section__text {
   font-size: 18px;
   font-style: italic;
+  margin-bottom: 0;
+  @media screen and (max-width: 1024px) {
+    text-align: justify;
+  }
+  @media screen and (max-width: 960px) {
+    font-size: 12px;
+  }
 }
 
 .quot_autor {
@@ -420,12 +614,18 @@ p {
 
 .service-section {
   width: 100%;
-  background-color: var(--color-bcg-light2);
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 стовпчики */
+  grid-template-columns: repeat(4, 1fr);
+  @media screen and (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    gap: 16px;
+    align-items: center;
+  }
 }
 
 .serv {
@@ -437,11 +637,27 @@ p {
 
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border: 1px var(--color-bcg-light2) solid;
+  }
+
+  @media screen and (min-width: 650px) and (max-width: 960px) {
+    width: 75%;
+  }
 }
 
 .serv:hover {
   transform: scale(1.03);
   z-index: 1;
+  @media screen and (max-width: 1024px) {
+    transform: none;
+    z-index: 0;
+  }
 }
 
 .serv-grid {
@@ -454,29 +670,115 @@ p {
 
 .serv:hover .serv-grid {
   opacity: 1;
+  @media screen and (max-width: 1024px) {
+    opacity: 0.5;
+  }
 }
 
 .serv-description {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
   color: var(--color-font-light);
+  @media screen and (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+  }
+  @media screen and (max-width: 960px) {
+    font-size: 12px;
+  }
+}
+
+.serv:hover .serv-button {
+  opacity: 1;
+  visibility: visible;
+}
+
+.serv-button {
+  opacity: 0;
+  visibility: hidden;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-evenly;
+  height: 46px;
+  background-color: transparent;
+  color: var(--color-link-light);
+  border: var(--color-link-light) 2px solid;
+  font-size: 16px;
+  transition: 0.3s;
+  @media screen and (max-width: 1024px) {
+    opacity: 1;
+    visibility: visible;
+  }
+  @media screen and (max-width: 960px) {
+    width: 150px;
+    font-size: 12px;
+  }
+}
+
+.serv-button:hover {
+  color: var(--color-link-dark);
+  border: var(--color-link-dark) 2px solid;
+  fill: var(--color-link-dark);
+}
+
+.serv-button__mobile {
+  display: none;
+  @media screen and (max-width: 1024px) {
+    display: block;
+  }
 }
 
 /* Contacts Section */
 .contacts-section {
   padding: 56px;
   color: var(--color-font-light);
+  @media screen and (max-width: 1024px) {
+    padding: 36px;
+  }
+}
+
+.contacts__map {
+  width: 600px;
+  height: 450px;
+  @media screen and (max-width: 1024px) {
+    width: 300px;
+    height: 250px;
+  }
+  @media screen and (max-width: 850px) {
+    width: 100%;
+    height: 250px;
+  }
 }
 
 .contacts-section__info {
   display: flex;
   justify-content: space-around;
+  gap: 10px;
+  @media screen and (max-width: 1024px) {
+    flex-direction: row;
+  }
+  @media screen and (max-width: 850px) {
+    flex-direction: column;
+    gap: 30px;
+  }
 }
 
 .contacts__info {
   display: flex;
   flex-direction: column;
   gap: 60px;
+  @media screen and (max-width: 1024px) {
+    gap: 30px;
+  }
+  @media screen and (max-width: 850px) {
+    align-items: center;
+    gap: 10px;
+  }
 }
 
 .contacts_bold {
@@ -538,6 +840,7 @@ p {
 /* Modal Window */
 .modalw {
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
@@ -615,8 +918,7 @@ Added z-index for modal;
   align-items: center;
   width: 100%;
   height: 100%;
-  /* background-image: url(../images/grid.png); */
-  /* color: transparent; */
+  cursor: pointer;
   border: none;
   outline: none;
   box-shadow: none;
@@ -642,6 +944,7 @@ Added z-index for modal;
   color: var(--color-font-light);
   font-size: 16px;
   position: absolute;
+  pointer-events: none;
 }
 
 .libutton__modal {
@@ -660,8 +963,12 @@ Added z-index for modal;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px 0;
+  z-index: 1;
   transition: opacity 0.3s, visibility 0.3s;
+  overflow: hidden;
+  @media screen and (max-width: 800px) {
+    align-items: end;
+  }
 }
 
 .modal.is-hidden {
@@ -682,12 +989,14 @@ Added z-index for modal;
   cursor: pointer;
 }
 
-li.disable-hover * {
+.disable-hover * {
   pointer-events: none;
 }
 
 .modal-content-serv {
-  position: relative;
+  display: flex;
+
+  position: fixed;
   width: 800px;
 
   height: 400px;
@@ -696,6 +1005,21 @@ li.disable-hover * {
   overflow-y: auto;
   z-index: 1000;
   background-color: var(--color-bcg-dark);
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
+}
+
+.modal-desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-desc p {
+  display: flex;
+  position: relative;
+  color: var(--color-font-light);
 }
 
 .serv-modal {
@@ -703,16 +1027,36 @@ li.disable-hover * {
   top: 0;
   left: 0;
   display: flex;
-
+  width: 100%;
+  height: 100%;
   filter: blur(10px);
   opacity: 0.8;
 }
 
 .serv-h {
-  position: absolute;
+  position: relative;
   color: var(--color-font-light);
 }
 
 .serv-close {
   fill: white;
 }
+
+/* Comments:
+//24.04 - added the overflow to service modal
+Додані посилання на соц мережі
+додані стиля для модального вікна
+фікс ховера на картку
+доданий курсор кнопки для карток
+додане мобільне меню + адаптація навігації
+адаптована хіро секція
+25.04 - адаптація секції свідчень під мобілку
+додав додаткові стилі під свідчення
+додав кнопки для кожної картки "деталі"
+почав адаптацію карток під мобілку
+поправив баги з модалкою
+закінчив адаптацію карток
+26.04 - додав стилі на кнопки карток
+мобільні стиля для відкритих карток
+
+*/
