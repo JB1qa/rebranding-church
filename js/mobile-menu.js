@@ -19,7 +19,6 @@ menuBtnOpen.addEventListener("click", toggleMenu);
 menuBtnClose.addEventListener("click", toggleMenu);
 
 document.addEventListener("click", function (e) {
-  // Якщо клік поза меню і кнопками, закриваємо меню
   if (
     !mobileMenu.contains(e.target) &&
     !menuBtnOpen.contains(e.target) &&
