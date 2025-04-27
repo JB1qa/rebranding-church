@@ -232,23 +232,23 @@ p {
   }
 }
 .hero-section::after {
-  content: "";
+ content: "";
+  inset: 0;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: background: linear-gradient(
+  background: linear-gradient(
       to bottom,
       rgba(255, 255, 255, 0) 20%,
       var(--color-bcg-dark) 100%
     ),
-    url(../images/header-banner.png);
-  background-color: var(--color-bcg-dark);
-  background-position: center;
-  background-size: cover;
+    url(../images/header-banner.jpg);
   filter: blur(3px);
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  opacity: 0.4;
   z-index: -1;
+
+  
 }
 
 .hero-section__title {
