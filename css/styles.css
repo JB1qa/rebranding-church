@@ -993,6 +993,11 @@ Added z-index for modal;
   pointer-events: none;
 }
 
+.disable-hover .mobile-menu * {
+  pointer-events: auto;
+}
+
+
 .modal-content-serv {
   display: flex;
 
