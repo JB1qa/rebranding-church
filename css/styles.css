@@ -238,7 +238,11 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: linear-gradient(to bottom, rgba(16, 18, 26, 0.6)),
+  background-image: background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 20%,
+      var(--color-bcg-dark) 100%
+    ),
     url(../images/header-banner.png);
   background-color: var(--color-bcg-dark);
   background-position: center;
