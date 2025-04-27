@@ -226,13 +226,15 @@ p {
 /*Hero Section*/
 .hero-section {
   position: relative;
+  overflow: hidden;
   padding: 300px 0;
+
   @media screen and (max-width: 960px) {
     padding: 150px 0;
   }
 }
 .hero-section::after {
- content: "";
+  content: "";
   inset: 0;
   position: absolute;
   background: linear-gradient(
@@ -247,8 +249,6 @@ p {
   background-repeat: no-repeat;
   opacity: 0.4;
   z-index: -1;
-
-  
 }
 
 .hero-section__title {
@@ -342,6 +342,9 @@ p {
 
 .details__icon {
   display: flex;
+  @media screen and (max-width: 475px) {
+    display: none;
+  }
 }
 
 /*About section*/
@@ -590,6 +593,14 @@ hr {
   }
 }
 
+.promo {
+  width: 560px;
+  height: 315px;
+  @media screen and (max-width: 760px) {
+    width: 100%;
+    height: 100%;
+  }
+}
 .evidence2-quotation {
   display: flex;
   justify-content: center;
@@ -1001,7 +1012,6 @@ Added z-index for modal;
   pointer-events: auto;
 }
 
-
 .modal-content-serv {
   display: flex;
 
@@ -1045,6 +1055,15 @@ Added z-index for modal;
 .serv-h {
   position: relative;
   color: var(--color-font-light);
+  @media screen and (max-width: 450px) {
+    font-size: 24px;
+  }
+}
+
+.serv-p {
+  @media screen and (max-width: 450px) {
+    font-size: 12px;
+  }
 }
 
 .serv-close {
