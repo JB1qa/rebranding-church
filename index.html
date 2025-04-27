@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Церква Відродження</title>
+
     <link rel="stylesheet" href="./css/styles.css" />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -40,32 +42,32 @@
               </svg>
             </button>
             <div class="mobile-menu">
-             <div class="mobile-menu__content">
-               <button class="burger__button menu-btn-close" type="button">
-                <svg
-                  class="burger__icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 34 34"
-                >
-                  <path
-                    d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
-                  ></path>
-                </svg>
-              </button>
-              <a class="header-logo mob" href="./"
-                ><img
-                  src="./images/logo-png.png"
-                  alt="Church Logo"
-                  width="200"
-                  height="auto"
-              /></a>
-              <ul class="mob-list">
-                <li><a href="#about-section">Про нас</a></li>
-                <li><a href="#evidence-section">Свідчення</a></li>
-                <li><a href="#service-section">Служіння</a></li>
-                <li><a href="#contacts-section">Контакти</a></li>
-              </ul>
-             </div>
+              <div class="mobile-menu__content">
+                <button class="burger__button menu-btn-close" type="button">
+                  <svg
+                    class="burger__icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 34 34"
+                  >
+                    <path
+                      d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+                    ></path>
+                  </svg>
+                </button>
+                <a class="header-logo mob" href="./"
+                  ><img
+                    src="./images/logo-png.png"
+                    alt="Church Logo"
+                    width="200"
+                    height="auto"
+                /></a>
+                <ul class="mob-list">
+                  <li><a href="#about-section">Про нас</a></li>
+                  <li><a href="#evidence-section">Свідчення</a></li>
+                  <li><a href="#service-section">Служіння</a></li>
+                  <li><a href="#contacts-section">Контакти</a></li>
+                </ul>
+              </div>
             </div>
           </nav>
         </div>
@@ -88,14 +90,13 @@
               <button class="details" type="button">
                 <span class="details__text">Дізнайся більше </span>
 
-                <svg
-                  class="details__icon icon icon-arrow-thin-right"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M16.172 9l-6.071-6.071 1.414-1.414 8.485 8.485-8.485 8.485-1.414-1.414 6.071-6.071h-16.172v-2z"
-                  ></path>
-                </svg>
+                <span class="details__icon">
+                  <svg class="icon icon-arrow-thin-right" viewBox="0 0 24 24">
+                    <path
+                      d="M16.172 9l-6.071-6.071 1.414-1.414 8.485 8.485-8.485 8.485-1.414-1.414 6.071-6.071h-16.172v-2z"
+                    ></path>
+                  </svg>
+                </span>
               </button>
             </a>
           </div>
@@ -180,8 +181,7 @@
           <div class="evidence2-details">
             <div class="evidence2-video">
               <iframe
-                width="560"
-                height="315"
+                class="promo"
                 src="https://www.youtube.com/embed/e2edAiR-x9U?si=qb2hm_jADLu2N6NM"
                 title="YouTube video player"
                 frameborder="0"
@@ -383,7 +383,7 @@
           </li>
         </ul>
       </section>
-       <section class="contacts-section" id="contacts-section">
+      <section class="contacts-section" id="contacts-section">
         <div class="container">
           <div class="contacts-section__info">
             <div class="contacts__info">
@@ -435,7 +435,8 @@
             <div class="contacts__map">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2678.2479241970673!2d35.1246788767672!3d47.834790171211665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dc60ca3a201ce9%3A0x803a5068a6dcbd66!2z0YPQuy4g0J_QvtCx0LXQtNGLLCA4Mywg0JfQsNC_0L7RgNC-0LbRjNC1LCDQl9Cw0L_QvtGA0L7QttGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2OTAwMA!5e0!3m2!1sru!2sua!4v1744787223686!5m2!1sru!2sua"
-                width="100%" height="100%"
+                width="100%"
+                height="100%"
                 style="border: 0"
                 allowfullscreen=""
                 loading="lazy"
@@ -510,32 +511,31 @@
           <div class="copy">Церква Відродження <span id="year"></span></div>
         </div>
       </div>
-    </footer> 
+    </footer>
 
-      <div id="modal1" class="modal is-hidden">
-        <div class="modal-content-serv">
-          <div class="modal-desc">
-            <img src="./images/grid.png" alt="grid1" class="serv-modal" />
-            <svg
-              class="modal-btn-close__icon close serv-close"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 34 34"
-            >
-              <path
-                d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
-              ></path>
-            </svg>
-            <h1 class="serv-h">Недільне зібрання</h1>
-            <p>sdasdjalkdjaslkdjaslkdjaslkdjaslkdajsdl</p>
-            <p>Contacts:</p>
-          </div>
+    <div id="modal1" class="modal is-hidden">
+      <div class="modal-content-serv">
+        <div class="modal-desc">
+          <img src="./images/grid.png" alt="grid1" class="serv-modal" />
+          <svg
+            class="modal-btn-close__icon close serv-close"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 34 34"
+          >
+            <path
+              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+            ></path>
+          </svg>
+          <h1 class="serv-h">Недільне зібрання</h1>
+          <p class="serv-p">sdasdjalkdjaslkdjaslkdjaslkdjaslkdajsdl</p>
+          <p class="serv-p">Contacts:</p>
         </div>
       </div>
-      <script src="./js/footer.js"></script>
-      <script src="./js/modal.js"></script>
-      <script src="./js/mobile-menu.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-      <script src="./js/slider.js"></script>
-    </main>
+    </div>
+    <script src="./js/footer.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
