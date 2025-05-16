@@ -992,9 +992,9 @@ Added z-index for modal;
   z-index: 1;
   transition: opacity 0.3s, visibility 0.3s;
   overflow: hidden;
-  @media screen and (max-width: 800px) {
+/*   @media screen and (max-width: 800px) {
     align-items: end;
-  }
+  } */
 }
 
 .modal.is-hidden {
