@@ -49,6 +49,7 @@
   --color-bcg-light: #4caf50;
   --color-bcg-light2: #ffffff;
   --color-bcg-dark: #10121a;
+  --color-bcg-medium: #73757d;
   --screen-mob: 375px;
   --screen-tab: 768px;
   --screen-desk: 960px;
@@ -84,6 +85,10 @@ body {
   line-height: 1.5;
   margin: 0;
   background-color: var(--color-font-dark);
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 button {
@@ -230,7 +235,7 @@ p {
   padding: 300px 0;
 
   @media screen and (max-width: 960px) {
-    padding: 150px 0;
+    padding: 150px 0 75px 0;
   }
 }
 .hero-section::after {
@@ -470,6 +475,7 @@ p {
   padding: 56px;
   @media screen and (max-width: 960px) {
     height: 100%;
+    padding: 36px 0;
   }
 }
 
@@ -488,17 +494,19 @@ p {
   display: flex;
   position: relative;
   max-width: 50%;
-
+  font-style: normal;
+  font-size: 36px;
   color: var(--color-font-light);
   text-shadow: 1px 1px 10px var(--color-bcg-dark);
   @media screen and (max-width: 960px) {
-    font-size: 18px;
+    font-size: 24px;
     min-width: 100%;
+    justify-content: center;
   }
 }
 
 .evidence-section__text {
-  display: flex;
+  /* display: flex; */
   position: relative;
 
   color: var(--color-font-light);
@@ -506,7 +514,7 @@ p {
   max-width: 75%;
   @media screen and (max-width: 960px) {
     font-size: 12px;
-    min-width: 100%;
+
     text-align: justify;
   }
 }
@@ -516,8 +524,10 @@ p {
   position: relative;
   justify-content: center;
   flex-direction: column;
-  box-shadow: 1px 1px 10px var(--color-font-light);
-
+  /* box-shadow: 1px 1px 10px var(--color-font-light); */
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 0;
   padding: 16px;
 }
 
@@ -805,7 +815,7 @@ hr {
   position: relative;
   color: var(--color-font-light);
   padding: 24px;
-  background-color: gray;
+  background-color: var(--color-bcg-medium);
 }
 
 .footer__section {
@@ -1088,3 +1098,45 @@ Added z-index for modal;
 мобільні стиля для відкритих карток
 
 */
+
+/* SLIDER UI */
+
+swiper-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+swiper-slide img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.slide_text {
+  margin: 20px;
+  max-width: 75%;
+}
+
+swiper-container {
+  --swiper-navigation-color: var(--color-bcg-light2);
+  --swiper-pagination-color: var(--color-bcg-medium);
+  --swiper-pagination-bullet-inactive-color: var(--color-bcg-light2);
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-opacity: 1;
+}
+
+swiper-container::part(button-prev),
+swiper-container::part(button-next) {
+  gap: 20px;
+}
