@@ -161,16 +161,67 @@
       <section class="evidence-section" id="evidence-section">
         <div class="container evidence-text">
           <h1 class="evidence-section__title">
-            Ми не зупиняємось, бо знаємо — Бог діє навіть тоді, коли навколо
-            тривога
+            <!-- Ми не зупиняємось, бо знаємо — Бог діє навіть тоді, коли навколо
+            тривога -->
+            Свідчення
           </h1>
-          <p class="evidence-section__text">
+          <!-- <p class="evidence-section__text">
             Життя церкви під час війни — це щоденна віра, молитва і служіння
             ближнім посеред тривог і небезпек. Попри небезпеку, ми збираємось на
             богослужіння, підтримуємо одне одного, допомагаємо нужденним і
             проголошуємо Євангеліє — бо саме в темряві найсильніше світить
             світло Христове.
-          </p>
+          </p> -->
+          <div class="slider">
+            <swiper-container
+              class="mySwiper"
+              navigation="true"
+              pagination="true"
+              keyboard="true"
+              mousewheel="true"
+              css-mode="true"
+              pagination-dynamic-bullets="true"
+              pagination-clickable="true"
+            >
+              <swiper-slide>
+                <p class="evidence-section__text slide_text">
+                  "Ми не втрачаємо радості і надії, бо знаємо: Христос — наша
+                  скеля, і Його Церква продовжує світити навіть у найтемніші
+                  дні." -
+                  <span class="quot_autor">Пастор, Яків Бринза</span>
+                </p>
+              </swiper-slide>
+              <swiper-slide>
+                <p class="evidence-section__text slide_text">
+                  "Ми не втрачаємо радості і надії, бо знаємо: Христос — наша
+                  скеля, і Його Церква продовжує світити навіть у найтемніші
+                  дні." -
+                  <span class="quot_autor">Пастор, Яків Бринза</span>
+                </p>
+              </swiper-slide>
+              <swiper-slide>
+                <p class="evidence-section__text slide_text">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, wheen an unknoown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book. Survived not only five centuries, but also the
+                  leap into electronic typesetting, remaining unchanged. -
+                  <span class="quot_autor">Lorem Ipsum</span>
+                </p>
+              </swiper-slide>
+              <swiper-slide>
+                <p class="evidence-section__text slide_text">
+                  "Ми не втрачаємо радості і надії, бо знаємо: Христос — наша
+                  скеля, і Його Церква продовжує світити навіть у найтемніші
+                  дні." -
+                  <span class="quot_autor">Пастор, Яків Бринза</span>
+                </p>
+              </swiper-slide>
+            </swiper-container>
+
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+          </div>
         </div>
       </section>
       <section class="evidence2-section" id="evidence2-section">
@@ -180,7 +231,8 @@
           </h1>
           <div class="evidence2-details">
             <div class="evidence2-video">
-              <iframe
+              <!-- <iframe
+
                 class="promo"
                 src="https://www.youtube.com/embed/e2edAiR-x9U?si=qb2hm_jADLu2N6NM"
                 title="YouTube video player"
@@ -188,7 +240,18 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
-              ></iframe>
+              ></iframe> -->
+              <video
+                width="100%"
+                autoplay
+                controls
+                controlslist="nodownload"
+                loop
+                poster="./images/intro-preview.jpg"
+              >
+                <source src="./images/intro.mp4" type="video/mp4" />
+                Ваш браузер не підтримує відео.
+              </video>
             </div>
             <div class="evidence2-quotation">
               <p class="evidence2-section__text">
@@ -222,7 +285,7 @@
 
         <ul class="grid">
           <li class="serv">
-            <img src="./images/grid.png" alt="grid1" class="serv-grid" />
+            <img src="./images/child.JPG" alt="grid1" class="serv-grid" />
             <div class="serv-description">
               <p>Дитяча недільна школа</p>
               <button
@@ -241,7 +304,7 @@
               <button
                 type="button"
                 class="open-modal serv-button"
-                data-target="modal1"
+                data-target="modal-yl"
               >
                 Детальніше
               </button>
@@ -254,7 +317,7 @@
               <button
                 type="button"
                 class="open-modal serv-button"
-                data-target="modal1"
+                data-target="modal-revival"
               >
                 Детальніше
               </button>
@@ -267,20 +330,20 @@
               <button
                 type="button"
                 class="open-modal serv-button"
-                data-target="modal1"
+                data-target="modal-family"
               >
                 Детальніше
               </button>
             </div>
           </li>
           <li class="serv">
-            <img src="./images/grid.png" alt="grid1" class="serv-grid" />
+            <img src="./images/milit.JPG" alt="grid1" class="serv-grid" />
             <div class="serv-description">
               <p>Зустрічі для сімей військових</p>
               <button
                 type="button"
                 class="open-modal serv-button"
-                data-target="modal1"
+                data-target="modal-mil"
               >
                 Детальніше
               </button>
@@ -294,7 +357,7 @@
               <button
                 type="button"
                 class="open-modal serv-button"
-                data-target="modal1"
+                data-target="modal-pray"
               >
                 Детальніше
               </button>
@@ -308,7 +371,7 @@
               <button
                 type="button"
                 class="open-modal serv-button"
-                data-target="modal1"
+                data-target="modal-conf"
               >
                 Детальніше
               </button>
@@ -321,7 +384,7 @@
               <button
                 type="button"
                 class="open-modal serv-button"
-                data-target="modal1"
+                data-target="modal-women"
               >
                 Детальніше
               </button>
@@ -334,7 +397,7 @@
               <button
                 type="button"
                 class="open-modal serv-button"
-                data-target="modal1"
+                data-target="modal-men"
               >
                 Детальніше
               </button>
@@ -347,7 +410,7 @@
               <button
                 type="button"
                 class="open-modal serv-button"
-                data-target="modal1"
+                data-target="modal-55"
               >
                 Детальніше
               </button>
@@ -361,7 +424,7 @@
               <button
                 type="button"
                 class="open-modal serv-button"
-                data-target="modal1"
+                data-target="modal-lgroups"
               >
                 Детальніше
               </button>
@@ -369,13 +432,13 @@
           </li>
 
           <li class="serv">
-            <img src="./images/grid.png" alt="grid1" class="serv-grid" />
+            <img src="./images/sunday.JPG" alt="grid1" class="serv-grid" />
             <div class="serv-description">
               <p>Недільні зібрання</p>
               <button
                 type="button"
                 class="open-modal serv-button"
-                data-target="modal1"
+                data-target="modal-sunday"
               >
                 Детальніше
               </button>
@@ -516,7 +579,16 @@
     <div id="modal1" class="modal is-hidden">
       <div class="modal-content-serv">
         <div class="modal-desc">
-          <img src="./images/grid.png" alt="grid1" class="serv-modal" />
+          <img src="./images/child.JPG" alt="grid1" class="serv-modal" />
+
+          <h1 class="serv-h">Дитяча недільна школа</h1>
+          <p class="serv-p">
+            Цікаві та розвивальні заняття для дітей, що проходять під час
+            недільного зібрання. Через історії з Біблії, ігри та творчість діти
+            знайомляться з добром, любов’ю, чесністю та іншими моральними
+            цінностями у дружній і турботливій атмосфері.
+          </p>
+          <p class="serv-p">Contacts:</p>
           <svg
             class="modal-btn-close__icon close serv-close"
             xmlns="http://www.w3.org/2000/svg"
@@ -526,9 +598,281 @@
               d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
             ></path>
           </svg>
-          <h1 class="serv-h">Недільне зібрання</h1>
-          <p class="serv-p">sdasdjalkdjaslkdjaslkdjaslkdjaslkdajsdl</p>
+        </div>
+      </div>
+    </div>
+    <div id="modal-yl" class="modal is-hidden">
+      <div class="modal-content-serv">
+        <div class="modal-desc">
+          <img src="./images/grid.png" alt="grid1" class="serv-modal" />
+
+          <h1 class="serv-h">Підлітковий клуб YL</h1>
+          <p class="serv-p">
+            Молодіжне служіння Young Life — це простір для підлітків і молоді,
+            де можна знайти друзів, весело провести час і поговорити на важливі
+            теми. Через ігри, спілкування, музику та відкриті розмови ми разом
+            шукаємо відповіді на життєві питання та відкриваємо для себе
+            справжні цінності.
+          </p>
           <p class="serv-p">Contacts:</p>
+          <svg
+            class="modal-btn-close__icon close serv-close"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 34 34"
+          >
+            <path
+              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div id="modal-revival" class="modal is-hidden">
+      <div class="modal-content-serv">
+        <div class="modal-desc">
+          <img src="./images/grid.png" alt="grid1" class="serv-modal" />
+
+          <h1 class="serv-h">Молодіжні зустрічі Revival</h1>
+          <p class="serv-p">
+            Тепла й неформальна вечерка для спілкування, відпочинку та
+            натхнення. Ми збираємось, щоб разом поїсти, поспілкуватись, пограти
+            і подумати над важливими темами життя, віри й дружби. Це місце, де
+            кожен знайде підтримку, прийняття та справжніх друзів.
+          </p>
+          <p class="serv-p">Contacts:</p>
+          <svg
+            class="modal-btn-close__icon close serv-close"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 34 34"
+          >
+            <path
+              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div id="modal-family" class="modal is-hidden">
+      <div class="modal-content-serv">
+        <div class="modal-desc">
+          <img src="./images/grid.png" alt="grid1" class="serv-modal" />
+
+          <h1 class="serv-h">Сімейне служіння</h1>
+          <p class="serv-p">
+            Зустрічі для тих, хто вже у шлюбі, де ми ділимося досвідом, вчимося
+            глибше розуміти одне одного й розвивати здорові стосунки. У теплій
+            атмосфері говоримо про любов, повагу, віру та підтримку в щоденному
+            сімейному житті.
+          </p>
+          <p class="serv-p">Contacts:</p>
+          <svg
+            class="modal-btn-close__icon close serv-close"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 34 34"
+          >
+            <path
+              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div id="modal-mil" class="modal is-hidden">
+      <div class="modal-content-serv">
+        <div class="modal-desc">
+          <img src="./images/milit.JPG" alt="grid1" class="serv-modal" />
+
+          <h1 class="serv-h">Зустрічі для сімей військових</h1>
+          <p class="serv-p">
+            Простір підтримки, взаєморозуміння та спільної молитви. Ми
+            збираємось, щоб ділитись переживаннями, зміцнювати віру та надихати
+            одне одного у непростий час. Тут родини знаходять тепло, турботу та
+            надію серед однодумців.
+          </p>
+          <p class="serv-p">Contacts:</p>
+          <svg
+            class="modal-btn-close__icon close serv-close"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 34 34"
+          >
+            <path
+              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div id="modal-pray" class="modal is-hidden">
+      <div class="modal-content-serv">
+        <div class="modal-desc">
+          <img src="./images/grid.png" alt="grid1" class="serv-modal" />
+
+          <h1 class="serv-h">Молитовні зустрічі</h1>
+          <p class="serv-p">
+            Молитовні зустрічі — це особливий час єдності з Богом і між собою.
+            Ми збираємось у спокійній атмосфері, щоб дякувати, просити,
+            підтримувати одне одного в молитві та шукати Божу волю. Це місце
+            сили, миру й духовного відновлення для кожного.
+          </p>
+          <p class="serv-p">Contacts:</p>
+          <svg
+            class="modal-btn-close__icon close serv-close"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 34 34"
+          >
+            <path
+              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div id="modal-conf" class="modal is-hidden">
+      <div class="modal-content-serv">
+        <div class="modal-desc">
+          <img src="./images/grid.png" alt="grid1" class="serv-modal" />
+
+          <h1 class="serv-h">Молодіжні конференції</h1>
+          <p class="serv-p">
+            Події, що об’єднують молодь для натхнення, глибоких роздумів і нових
+            знайомств. Через спікерів, прославлення, практичні теми та живе
+            спілкування ми разом зростаємо у вірі, лідерстві та покликанні в
+            сучасному світі.
+          </p>
+          <p class="serv-p">Contacts:</p>
+          <svg
+            class="modal-btn-close__icon close serv-close"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 34 34"
+          >
+            <path
+              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div id="modal-women" class="modal is-hidden">
+      <div class="modal-content-serv">
+        <div class="modal-desc">
+          <img src="./images/grid.png" alt="grid1" class="serv-modal" />
+
+          <h1 class="serv-h">Жіночі клуби</h1>
+          <p class="serv-p">
+            Теплі зустрічі для жінок, де можна відпочити душею, поспілкуватися,
+            поділитися досвідом і надихнутись. У невимушеній атмосфері говоримо
+            про життя, віру, сім’ю та саморозвиток, підтримуючи одна одну на
+            шляху до внутрішньої сили й гармонії.
+          </p>
+          <p class="serv-p">Contacts:</p>
+          <svg
+            class="modal-btn-close__icon close serv-close"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 34 34"
+          >
+            <path
+              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div id="modal-men" class="modal is-hidden">
+      <div class="modal-content-serv">
+        <div class="modal-desc">
+          <img src="./images/grid.png" alt="grid1" class="serv-modal" />
+
+          <h1 class="serv-h">Чоловічі клуби</h1>
+          <p class="serv-p">
+            Зустрічі для чоловіків, де в дружній атмосфері ми говоримо про
+            справжнє лідерство, віру, відповідальність і життєві виклики. Це час
+            для чесного спілкування, взаємної підтримки, духовного зростання та
+            розвитку як чоловіків, батьків і друзів.
+          </p>
+          <p class="serv-p">Contacts:</p>
+          <svg
+            class="modal-btn-close__icon close serv-close"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 34 34"
+          >
+            <path
+              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div id="modal-55" class="modal is-hidden">
+      <div class="modal-content-serv">
+        <div class="modal-desc">
+          <img src="./images/grid.png" alt="grid1" class="serv-modal" />
+
+          <h1 class="serv-h">Служіння 55+</h1>
+          <p class="serv-p">
+            Зустрічі для людей старшого віку, де панує тепло, повага й щире
+            спілкування. Ми разом молимось, підтримуємо одне одного, ділимось
+            життєвою мудрістю та натхненням. Це простір радості, турботи й
+            активного духовного життя у колі друзів.
+          </p>
+          <p class="serv-p">Contacts:</p>
+          <svg
+            class="modal-btn-close__icon close serv-close"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 34 34"
+          >
+            <path
+              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div id="modal-lgroups" class="modal is-hidden">
+      <div class="modal-content-serv">
+        <div class="modal-desc">
+          <img src="./images/grid.png" alt="grid1" class="serv-modal" />
+
+          <h1 class="serv-h">Малі групи розбору Біблії</h1>
+          <p class="serv-p">
+            Зустрічі в невеликих колах, де разом читаємо, обговорюємо та глибше
+            розуміємо Слово Боже. У затишній атмосфері ділимося думками,
+            підтримуємо одне одного в вірі та зростаємо духовно через живе
+            спілкування й молитву.
+          </p>
+          <p class="serv-p">Contacts:</p>
+          <svg
+            class="modal-btn-close__icon close serv-close"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 34 34"
+          >
+            <path
+              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div id="modal-sunday" class="modal is-hidden">
+      <div class="modal-content-serv">
+        <div class="modal-desc">
+          <img src="./images/sunday.JPG" alt="grid1" class="serv-modal" />
+
+          <h1 class="serv-h">Недільні зібрання</h1>
+          <p class="serv-p">
+            Центральна подія тижня, де вся церква збирається разом для спільної
+            молитви, прославлення Бога та почуття єдності. Через проповідь, спів
+            і Слово ми черпаємо силу, натхнення й оновлення для щоденного життя.
+          </p>
+          <p class="serv-p">Contacts:</p>
+          <svg
+            class="modal-btn-close__icon close serv-close"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 34 34"
+          >
+            <path
+              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+            ></path>
+          </svg>
         </div>
       </div>
     </div>
@@ -536,6 +880,5 @@
     <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
