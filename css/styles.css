@@ -1034,7 +1034,7 @@ Added z-index for modal;
   position: fixed;
   width: 800px;
 
-  height: 400px;
+  height: auto;
   max-height: 500px;
   padding: 24px;
   overflow-y: auto;
@@ -1071,6 +1071,7 @@ Added z-index for modal;
 .serv-h {
   position: relative;
   color: var(--color-font-light);
+  max-width: 80%;
   @media screen and (max-width: 450px) {
     font-size: 24px;
   }
@@ -1083,6 +1084,10 @@ Added z-index for modal;
   @media screen and (max-width: 450px) {
     font-size: 12px;
   }
+}
+
+.serv-p.contact {
+  margin: 0;
 }
 
 .serv-close {
@@ -1148,4 +1153,34 @@ swiper-container {
 swiper-container::part(button-prev),
 swiper-container::part(button-next) {
   gap: 20px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: 1px var(--color-link-light) solid;
+  outline: none;
+  background-color: transparent;
+  color: var(--color-link-light);
+
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  @media screen and (max-width: 960px) {
+    bottom: 5px;
+    right: 5px;
+  }
+}
+
+#myBtn:hover {
+  background-color: var(--color-bcg-medium);
+}
+
+.top-icon {
+  fill: var(--color-link-light);
+  width: 20px;
+  height: 20px;
 }
