@@ -247,13 +247,14 @@ p {
       rgba(255, 255, 255, 0) 20%,
       var(--color-bcg-dark) 100%
     ),
-    url(../images/header-banner.webp);
+    /* url(../images/header-banner.webp); */ url(../images/header-banner.webp);
   filter: blur(3px);
   background-size: cover;
   background-position: left;
   background-repeat: no-repeat;
   opacity: 0.4;
   z-index: -1;
+  /* transform: scaleX(-1); */
 }
 
 .hero-section__title {
@@ -392,7 +393,7 @@ p {
   justify-content: center;
   width: 300px;
   height: 400px;
-  border: var(--color-bcg-dark) 1px solid;
+  border: var(--color-bcg-light2) 1px solid;
   position: relative;
   background-color: rgba(0, 0, 0, 0.5);
   transition: 0.3s;
@@ -484,7 +485,7 @@ p {
   position: absolute;
   inset: 0;
   /* background-image: url("../images/evidence-banner.jpg"); */
-  background-image: url("../images/ministries/evidence-banner.webp");
+  /* background-image: url("../images/ministries/evidence-banner.webp"); */
   opacity: 0.7;
   z-index: 0;
   background-size: cover;
@@ -492,9 +493,11 @@ p {
 }
 
 .evidence-section__title {
+  margin-bottom: 0px;
+  justify-content: center;
   display: flex;
   position: relative;
-  max-width: 50%;
+  /* max-width: 50%; */
   font-style: normal;
   font-size: 36px;
   color: var(--color-font-light);
@@ -1156,7 +1159,7 @@ swiper-container::part(button-next) {
 }
 
 #myBtn {
-  display: none;
+  opacity: 1;
   position: fixed;
   bottom: 20px;
   right: 30px;
@@ -1165,18 +1168,19 @@ swiper-container::part(button-next) {
   outline: none;
   background-color: transparent;
   color: var(--color-link-light);
-
+  transition: 0.3s;
   padding: 10px;
   border-radius: 10px;
   font-size: 18px;
   @media screen and (max-width: 960px) {
-    bottom: 5px;
-    right: 5px;
+    bottom: 8px;
+    right: 10px;
   }
 }
 
 #myBtn:hover {
-  background-color: var(--color-bcg-medium);
+  background-color: rgb(192 192 192 / 31%);
+  transform: scale(1.05);
 }
 
 .top-icon {
@@ -1184,3 +1188,103 @@ swiper-container::part(button-next) {
   width: 20px;
   height: 20px;
 }
+
+.liqpay-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.support {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.offer {
+  font-size: 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+.liqpay-modal.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.public-offer {
+  color: var(--color-font-light);
+  text-align: center;
+}
+
+.public-offer p,
+h5 {
+  text-align: left;
+}
+
+.public-offer h2 {
+  @media screen and (max-width: 650px) {
+    font-size: 18px;
+  }
+}
+
+.public-offer h3 {
+  @media screen and (max-width: 650px) {
+    font-size: 14px;
+  }
+}
+
+.public-offer h5 {
+  @media screen and (max-width: 650px) {
+    font-size: 10px;
+  }
+}
+
+.public-offer p {
+  @media screen and (max-width: 650px) {
+    font-size: 8px;
+  }
+}
+
+.public-offer h2,
+h5 {
+  margin-bottom: 0;
+}
+
+.offer-nav {
+  justify-content: center;
+}
+/* VIDEO TEST BACKGR */
+/* .video-background {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+}
+
+.video-background .content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding-top: 30vh;
+} */
