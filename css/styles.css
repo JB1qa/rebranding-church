@@ -1159,7 +1159,7 @@ swiper-container::part(button-next) {
 }
 
 #myBtn {
-  opacity: 1;
+  opacity: 0;
   position: fixed;
   bottom: 20px;
   right: 30px;
