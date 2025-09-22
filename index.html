@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Церква Відродження</title>
+<link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+   
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-container">
+          <nav class="header-nav">
+            <ul class="header-list">
+              <li>
+                <a href="#about-section" aria-label="Про нас">Про нас</a>
+              </li>
+              <li>
+                <a href="#evidence-section" aria-label="Свідчення">Свідчення</a>
+              </li>
+              <li>
+                <a href="#service-section" aria-label="Служіння">Служіння</a>
+              </li>
+              <li>
+                <a href="#contacts-section" aria-label="Контакти">Контакти</a>
+              </li>
+            </ul>
+            <a class="header-logo" href="./"
+              ><img
+                src="./images/logo.png"
+                alt="Church Revival Logo"
+                width="200"
+                height="90"
+            /></a>
+            <button
+              class="burger__button menu-btn-open"
+              type="button"
+              aria-label="Відкрити Меню"
+            >
+              <svg
+                class="burger__icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 34 34"
+              >
+                <path
+                  d="M0 3h20v2h-20v-2zM0 9h20v2h-20v-2zM0 15h20v2h-20v-2z"
+                ></path>
+              </svg>
+            </button>
+            <div class="mobile-menu">
+              <div class="mobile-menu__content">
+                <button
+                  class="burger__button menu-btn-close"
+                  type="button"
+                  aria-label="Закрити меню"
+                >
+                  <svg
+                    class="burger__icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 34 34"
+                  >
+                    <path
+                      d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+                    ></path>
+                  </svg>
+                </button>
+                <a class="header-logo mob" href="./"
+                  ><img
+                    src="./images/logo.png"
+                    alt="Church Revival Logo mob"
+                    width="200"
+                    height="90"
+                /></a>
+                <ul class="mob-list">
+                  <li>
+                    <a href="#about-section" aria-label="Про нас">Про нас</a>
+                  </li>
+                  <li>
+                    <a href="#evidence-section" aria-label="Свідчення"
+                      >Свідчення</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#service-section" aria-label="Служіння"
+                      >Служіння</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#contacts-section" aria-label="Контакти"
+                      >Контакти</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero-section">
+        <div class="video-background">
+          <video id="introVideo" class="header_mob" autoplay muted playsinline onended="this.pause();">
+            <source src="./images/mobile.webm" type="video/webm" />
+            Ваш браузер не підтримує відео.
+          </video>
+
+          <video id="introVideo" class="header_desk" autoplay muted playsinline onended="this.pause();">
+            <source src="./images/desktop.webm" type="video/webm" />
+            Ваш браузер не підтримує відео.
+          </video>
+          
+            <h1 class="visually-hidden">Привіт, церкво!</h1>
+            
+          
+       <div class="scroll-arrow" id="ctaBtn">
+        
+            
+            
+            <span class="time">Четвер: 18:00 | Неділя: 10:00</span>
+          
+         <a  class="hero-scroll" href="#about-section">
+      <svg class="hero-scroll__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+</svg>
+    </a>  
+       </div>
+
+          <script>
+ 
+
+  const hero = document.querySelector('.hero-section');
+const btn = hero.querySelector('#ctaBtn');
+
+const videos = hero.querySelectorAll('video');
+
+videos.forEach(video => {
+  video.addEventListener('ended', () => {
+    if (video.offsetParent !== null) {
+      btn.style.display = "flex";
+    }
+  });
+});
+
+</script>
+        </div>
+        
+      </section>
+      <section class="about-section" id="about-section">
+        <div class="container">
+          <h1 class="about-section__title">Наші цінності</h1>
+
+          <ul class="about-section_list">
+            <li>
+              <article class="about-card">
+                <h3 class="about-card__title">Любити Бога</h3>
+                <img
+                  src="./images/ministries/about_new_god.webp"
+                  alt="about_love_God"
+                  class="about-card__image"
+                  loading="lazy"
+                  width="300"
+                  height="400"
+                />
+                <div class="about-card__description">
+                  <p>
+                    Жити в особистих стосунках із Богом, шануючи Його понад усе
+                    і прагнучи виконувати Його волю.
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="about-card">
+                <h3 class="about-card__title">Любити людей</h3>
+                <img
+                  src="./images/ministries/about_new_peoples.webp"
+                  alt="about_love_people"
+                  class="about-card__image"
+                  loading="lazy"
+                  width="300"
+                  height="400"
+                />
+                <div class="about-card__description">
+                  <p>
+                    Приймати, служити й підтримувати ближніх з тією ж
+                    самовідданістю, з якою Христос полюбив нас.
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="about-card">
+                <h3 class="about-card__title">Робити нових учнів</h3>
+                <img
+                  src="./images/ministries/about_new_child.webp"
+                  alt="about_make_followers"
+                  class="about-card__image"
+                  loading="lazy"
+                  width="300"
+                  height="400"
+                />
+                <div class="about-card__description">
+                  <p>
+                    Ділитися Євангелієм, наставляти інших у вірі та допомагати
+                    їм зростати в послідовному слідуванні за Христом.
+                  </p>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="evidence2-section" id="evidence2-section">
+        <div class="container evidence2-text">
+          <h1 class="evidence2-section__title">
+            Віра — це не втеча від реальності, а сила пройти її разом з Христом
+          </h1>
+          <div class="evidence2-details">
+            <div class="evidence2-video">
+             
+              <video
+                width="100%"
+                
+                controls
+                playsinline
+                preload="metadata"
+                controlslist="nodownload"
+              
+                poster="./images/intro-preview.webp"
+                aria-label="Відео знайомство з церквою"
+              >
+                <source src="./images/intro.webm" type="video/webm" />
+                <source src="./images/intro.mp4" type="video/mp4" />
+                Ваш браузер не підтримує відео.
+              </video>
+            </div>
+
+            <div class="evidence2-quotation">
+              <p class="evidence2-section__text">
+                «Ми не втрачаємо радості і надії, бо знаємо: Христос — наша
+                скеля, і Його Церква продовжує світити навіть у найтемніші дні.»
+                -
+                <span class="quot_autor">Пастор, Яків Бринза</span>
+              </p>
+              <hr />
+              <p class="evidence2-section__text">
+                «Молодь шукає справжнього — і ми показуємо їм, що справжнє
+                життя, радість і сила є тільки в Христі.» -
+                <span class="quot_autor"
+                  >Молодіжний лідер, Антоніо Тортоса-Кузнецов</span
+                >
+              </p>
+              <hr />
+              <p class="evidence2-section__text">
+                «Навіть у зрілому віці Бог продовжує писати з нами нові історії
+                віри, любові й служіння.» -
+                <span class="quot_autor"
+                  >Служителька для людей 55+, Світлана Кравецька</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="evidence-section" id="evidence-section">
+        <div class="container evidence-text">
+          <hr />
+          <h1 class="evidence-section__title">
+            
+            Свідчення
+          </h1>
+        
+          <div class="slider" aria-label="Слайдер свідчень">
+            <swiper-container
+              class="mySwiper"
+              navigation="true"
+              pagination="true"
+              keyboard="true"
+              mousewheel="true"
+              css-mode="true"
+              pagination-dynamic-bullets="true"
+              pagination-clickable="true"
+              loop="true"
+            >
+              <swiper-slide>
+                <p class="evidence-section__text slide_text">
+                  «Я люблю церкву «Відродження», бо це моя духовна родина. 
+                  Тут прославляють Христа, служать один одному та зростають у Божому Слові. 
+                  Я вдячний Богові за церкву, де кожен має місце і цінність». -
+                  <span class="quot_autor">Яків</span>
+                </p>
+              </swiper-slide>
+              <swiper-slide>
+                <p class="evidence-section__text slide_text">
+                  «Люблю церкву «Відродження», бо вона жива, щира й сповнена Божої любові. 
+                  Тут звичайні люди пізнають реального Бога. Саме тут я відчула справжню єдність і підтримку в найважчі моменти». -
+                  <span class="quot_autor">Аня</span>
+                </p>
+              </swiper-slide>
+              <swiper-slide>
+                <p class="evidence-section__text slide_text">
+                 «У церкві «Відродження» я знайшла справжню спільноту, де моя віра оживає. Тут я відкриваю покликання й духовно зростаю. Це місце, де мене розуміють, підтримують і надихають». -
+                  <span class="quot_autor">Світлана</span>
+                </p>
+              </swiper-slide>
+              <swiper-slide>
+                <p class="evidence-section__text slide_text">
+                  «У церкві «Відродження» я народився духовно й продовжую зростати. Тут я бачу, що потрібен і можу служити. Це моя духовна сім’я, де завжди є щире спілкування та підтримка». -
+                  <span class="quot_autor">Роман</span>
+                </p>
+              </swiper-slide>
+              <swiper-slide>
+                <p class="evidence-section__text slide_text">
+                  «Церква «Відродження» — це мій дім, де мене люблять, приймають і надихають. Тут я зростала з дитинства й бачила ідеального Христа серед неідеальних людей. Це місце спільної радості, навчання і Божої присутності». -
+                  <span class="quot_autor">Соня</span>
+                </p>
+              </swiper-slide>
+              <swiper-slide>
+                <p class="evidence-section__text slide_text">
+                  «Я люблю нашу церкву за сімейну атмосферу, де завжди тепло, щиро і радісно. Тут можна бути собою, отримати підтримку, обійми й молитву. Церква «Відродження» — це дім, де різні люди стають рідними» -
+                  <span class="quot_autor">Антоніо</span>
+                </p>
+              </swiper-slide>
+            </swiper-container>
+
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+          </div>
+          <hr />
+        </div>
+      </section>
+
+      <section class="service-section" id="service-section">
+        <h1 class="visually-hidden">Служіння</h1>
+
+        <ul class="grid">
+          <li class="serv">
+            <img
+              src="./images/ministries/sunday.webp"
+              alt="Недільні зібрання"
+              class="serv-grid"
+              loading="lazy"
+              width="800"
+              height="400"
+            />
+            <div class="serv-description">
+              <p>Недільні зібрання</p>
+              <button
+                type="button"
+                class="open-modal serv-button"
+                data-target="modal-sunday"
+              >
+                Детальніше
+              </button>
+            </div>
+          </li>
+          <li class="serv">
+            <img
+              src="./images/ministries/pray.webp"
+              alt="Молитовні зустрічі"
+              class="serv-grid"
+              loading="lazy"
+              width="800"
+              height="400"
+            />
+            <div class="serv-description">
+              <p>Молитовні зустрічі</p>
+              <button
+                type="button"
+                class="open-modal serv-button"
+                data-target="modal-pray"
+              >
+                Детальніше
+              </button>
+            </div>
+          </li>
+          <li class="serv">
+            <img
+              src="./images/ministries/revyouth.webp"
+              alt="Молодіжні зустрічі Revival"
+              class="serv-grid"
+              loading="lazy"
+              width="800"
+              height="400"
+            />
+            <div class="serv-description">
+              <p>Молодіжні зустрічі Revival</p>
+              <button
+                type="button"
+                class="open-modal serv-button"
+                data-target="modal-revival"
+              >
+                Детальніше
+              </button>
+            </div>
+          </li>
+          <li class="serv">
+            <img
+              src="./images/ministries/child.webp"
+              alt="Дитяча недільна школа"
+              class="serv-grid"
+              loading="lazy"
+              width="800"
+              height="400"
+            />
+            <div class="serv-description">
+              <p>Дитяча недільна школа</p>
+              <button
+                type="button"
+                class="open-modal serv-button"
+                data-target="modal1"
+              >
+                Детальніше
+              </button>
+            </div>
+          </li>
+          <li class="serv">
+            <img
+              src="./images/ministries/littlegr.webp"
+              alt="Малі групи розбору Біблії"
+              class="serv-grid"
+              loading="lazy"
+              width="800"
+              height="400"
+            />
+            <div class="serv-description">
+              <p>Малі групи розбору Біблії</p>
+              <button
+                type="button"
+                class="open-modal serv-button"
+                data-target="modal-lgroups"
+              >
+                Детальніше
+              </button>
+            </div>
+          </li>
+          <li class="serv">
+            <img
+              src="./images/ministries/younglife.webp"
+              alt="Підлітковий клуб YL"
+              class="serv-grid"
+              loading="lazy"
+              width="800"
+              height="400"
+            />
+            <div class="serv-description">
+              <p>Підлітковий клуб YL</p>
+              <button
+                type="button"
+                class="open-modal serv-button"
+                data-target="modal-yl"
+              >
+                Детальніше
+              </button>
+            </div>
+          </li>
+          <li class="serv">
+            <img
+              src="./images/ministries/conf.webp"
+              alt="Молодіжні конференції"
+              class="serv-grid"
+              loading="lazy"
+              width="800"
+              height="400"
+            />
+            <div class="serv-description">
+              <p>Молодіжні конференції</p>
+              <button
+                type="button"
+                class="open-modal serv-button"
+                data-target="modal-conf"
+              >
+                Детальніше
+              </button>
+            </div>
+          </li>
+          <li class="serv">
+            <img
+              src="./images/ministries/woman.webp"
+              alt="Жіночі клуби"
+              class="serv-grid"
+              loading="lazy"
+              width="800"
+              height="400"
+            />
+            <div class="serv-description">
+              <p>Жіночі клуби</p>
+              <button
+                type="button"
+                class="open-modal serv-button"
+                data-target="modal-women"
+              >
+                Детальніше
+              </button>
+            </div>
+          </li>
+          <li class="serv">
+            <img
+              src="./images/ministries/man.webp"
+              alt="Чоловічі клуби"
+              class="serv-grid"
+              loading="lazy"
+              width="800"
+              height="400"
+            />
+            <div class="serv-description">
+              <p>Чоловічі клуби</p>
+              <button
+                type="button"
+                class="open-modal serv-button"
+                data-target="modal-men"
+              >
+                Детальніше
+              </button>
+            </div>
+          </li>
+          <li class="serv">
+            <img
+              src="./images/ministries/family.webp"
+              alt="Сімейне служіння"
+              class="serv-grid"
+              loading="lazy"
+              width="800"
+              height="400"
+            />
+            <div class="serv-description">
+              <p>Сімейне служіння</p>
+              <button
+                type="button"
+                class="open-modal serv-button"
+                data-target="modal-family"
+              >
+                Детальніше
+              </button>
+            </div>
+          </li>
+          <li class="serv">
+            <img
+              src="./images/ministries/oldgroup.webp"
+              alt="Служіння 55+"
+              class="serv-grid"
+              loading="lazy"
+              width="800"
+              height="400"
+            />
+            <div class="serv-description">
+              <p>Служіння 55+</p>
+              <button
+                type="button"
+                class="open-modal serv-button"
+                data-target="modal-55"
+              >
+                Детальніше
+              </button>
+            </div>
+          </li>
+          <li class="serv">
+            <img
+              src="./images/ministries/milit.webp"
+              alt="Зустрічі для сімей військових"
+              class="serv-grid"
+              loading="lazy"
+              width="800"
+              height="400"
+            />
+            <div class="serv-description">
+              <p>Зустрічі для сімей військових</p>
+              <button
+                type="button"
+                class="open-modal serv-button"
+                data-target="modal-mil"
+              >
+                Детальніше
+              </button>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="contacts-section" id="contacts-section">
+        <div class="container">
+          <div class="contacts-section__info">
+            <div class="contacts__info">
+              <div class="address-info">
+                <h1>Чекаємо на тебе</h1>
+                <p class="contacts__text">
+                  <span class="contacts_bold">Адреса:</span>
+                  <a
+                    href="https://maps.app.goo.gl/sB7cQfp3HPoncNQy5"
+                    target="_blank"
+                    >м. Запоріжжя, вул. Перемоги, 83</a
+                  >
+                </p>
+                <p class="contacts__text">
+                  <span class="contacts_bold">Телефон:</span>
+                  <a href="tel:+380979111258">+38 097 911 12 58</a>
+                </p>
+                <p class="contacts__text">
+                  <span class="contacts_bold">Email:</span>
+                  <a href="mailto:vozrozhdeniezp@gmail.com"
+                    >vozrozhdeniezp@gmail.com</a
+                  >
+                </p>
+              </div>
+              <div class="support">
+                <div class="support-button">
+                  <form
+                    method="POST"
+                    accept-charset="utf-8"
+                    action="https://www.liqpay.ua/api/3/checkout"
+                    style="text-align: center"
+                    target="_blank"
+                  >
+                    <input
+                      type="hidden"
+                      name="data"
+                      value="eyJ2ZXJzaW9uIjozLCJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiIwLjAwIiwiY3VycmVuY3kiOiJVQUgiLCJkZXNjcmlwdGlvbiI6ItCf0L7QttC10YDRgtCy0YPQstCw0L3QvdGPIiwicHVibGljX2tleSI6Imk2MzU2MzkxMjY5NCIsImxhbmd1YWdlIjoidWsifQ=="
+                    />
+                    <input
+                      type="hidden"
+                      name="signature"
+                      value="KT1uREo0GxDkA9OVNn48Lr6orAI="
+                    />
+                    <button class="details">
+                      <span class="details__text">Підтримати нас </span>
+                    </button>
+                  </form>
+                </div>
+
+                <p class="offer">
+                  Натискаючи кнопку, ви погоджуєтесь з
+                  <a href="offer.html" target="_blank" class="offer_link">Публічною офертою</a>
+                </p>
+              </div>
+
+              
+            </div>
+            <div class="contacts__map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1339.1213677165447!2d35.1265461!3d47.8348907!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dc67de39e09753%3A0x6b28a412525159eb!2z0KXRgNC40YHRgtC40Y_QvdGB0YzQutCwINGG0LXRgNC60LLQsCDQktGW0LTRgNC-0LTQttC10L3QvdGPINCE0KXQkQ!5e0!3m2!1sru!2snl!4v1752504503536!5m2!1sru!2snl"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Локація"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__section">
+          <div class="socials">
+            <a href="https://www.facebook.com/RevivalChurchZp" target="_blank">
+              <svg
+                class="socials__icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 34 34"
+              >
+                <path
+                  d="M34 17C34 7.61016 26.3898 0 17 0C7.61016 0 0 7.61016 0 17C0 26.3898 7.61016 34 17 34C17.0996 34 17.1992 34 17.2988 33.9934V20.7652H13.6465V16.5086H17.2988V13.3742C17.2988 9.7418 19.5168 7.76289 22.7574 7.76289C24.3113 7.76289 25.6461 7.87578 26.0312 7.92891V11.7273H23.8C22.0402 11.7273 21.6949 12.5641 21.6949 13.7926V16.502H25.9117L25.3605 20.7586H21.6949V33.3426C28.8004 31.3039 34 24.7629 34 17Z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="https://www.instagram.com/revivall.church/"
+              target="_blank"
+            >
+              <svg
+                class="socials__icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 35 34"
+              >
+                <path
+                  d="M20.8496 17C20.8496 18.7971 19.35 20.2539 17.5 20.2539C15.65 20.2539 14.1504 18.7971 14.1504 17C14.1504 15.2029 15.65 13.7461 17.5 13.7461C19.35 13.7461 20.8496 15.2029 20.8496 17Z"
+                ></path>
+                <path
+                  d="M25.3336 11.2429C25.1725 10.819 24.9157 10.4354 24.5819 10.1205C24.2577 9.79621 23.863 9.54667 23.4264 9.39025C23.0724 9.25666 22.5404 9.09765 21.5607 9.05433C20.5009 9.00738 20.1831 8.99726 17.5 8.99726C14.8166 8.99726 14.4989 9.00712 13.4393 9.05407C12.4596 9.09765 11.9274 9.25666 11.5736 9.39025C11.137 9.54667 10.742 9.79621 10.4181 10.1205C10.0843 10.4354 9.82746 10.8188 9.66618 11.2429C9.52866 11.5868 9.36497 12.1038 9.32037 13.0556C9.27204 14.0849 9.26163 14.3935 9.26163 17.0003C9.26163 19.6067 9.27204 19.9154 9.32037 20.9449C9.36497 21.8967 9.52866 22.4134 9.66618 22.7574C9.82746 23.1815 10.0841 23.5649 10.4179 23.8798C10.742 24.204 11.1367 24.4536 11.5733 24.61C11.9274 24.7438 12.4596 24.9029 13.4393 24.9462C14.4989 24.9931 14.8164 25.003 17.4997 25.003C20.1834 25.003 20.5011 24.9931 21.5604 24.9462C22.5402 24.9029 23.0724 24.7438 23.4264 24.61C24.3028 24.2816 24.9955 23.6087 25.3336 22.7574C25.4711 22.4134 25.6348 21.8967 25.6796 20.9449C25.728 19.9154 25.7381 19.6067 25.7381 17.0003C25.7381 14.3935 25.728 14.0849 25.6796 13.0556C25.635 12.1038 25.4713 11.5868 25.3336 11.2429ZM17.5 22.0126C14.65 22.0126 12.3397 19.7686 12.3397 17C12.3397 14.2314 14.65 11.9874 17.5 11.9874C20.3497 11.9874 22.6601 14.2314 22.6601 17C22.6601 19.7686 20.3497 22.0126 17.5 22.0126ZM22.8641 12.9606C22.1981 12.9606 21.6582 12.4361 21.6582 11.7892C21.6582 11.1422 22.1981 10.6177 22.8641 10.6177C23.53 10.6177 24.07 11.1422 24.07 11.7892C24.0697 12.4361 23.53 12.9606 22.8641 12.9606Z"
+                ></path>
+                <path
+                  d="M17.5 0C7.83649 0 0 7.61259 0 17C0 26.3874 7.83649 34 17.5 34C27.1635 34 35 26.3874 35 17C35 7.61259 27.1635 0 17.5 0ZM27.4882 21.0246C27.4396 22.0637 27.2695 22.7732 27.0212 23.3942C26.4991 24.7055 25.4321 25.742 24.0823 26.2491C23.4433 26.4904 22.7127 26.6554 21.6432 26.7028C20.5716 26.7503 20.2293 26.7617 17.5003 26.7617C14.771 26.7617 14.4289 26.7503 13.357 26.7028C12.2876 26.6554 11.557 26.4904 10.918 26.2491C10.2472 26.004 9.64001 25.6198 9.13799 25.1231C8.6269 24.6357 8.23143 24.0455 7.97909 23.3942C7.73075 22.7735 7.56065 22.0637 7.51205 21.0248C7.46265 19.9836 7.45117 19.6511 7.45117 17C7.45117 14.3489 7.46265 14.0164 7.51179 12.9754C7.56039 11.9363 7.73022 11.2268 7.97855 10.6058C8.2309 9.95445 8.62663 9.36432 9.13799 8.87691C9.63974 8.38016 10.2472 7.99599 10.9177 7.75085C11.557 7.50961 12.2873 7.34464 13.357 7.29716C14.4286 7.24969 14.771 7.23828 17.5 7.23828C20.229 7.23828 20.5714 7.24969 21.643 7.29742C22.7127 7.34464 23.443 7.50961 24.0823 7.7506C24.7528 7.99573 25.3603 8.38016 25.8623 8.87691C26.3734 9.36458 26.7691 9.95445 27.0212 10.6058C27.2698 11.2268 27.4396 11.9363 27.4885 12.9754C27.5373 14.0164 27.5488 14.3489 27.5488 17C27.5488 19.6511 27.5373 19.9836 27.4882 21.0246Z"
+                ></path>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com/@RevivalChurchZp" target="_blank">
+              <svg
+                class="socials__icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 35 34"
+              >
+                <path
+                  d="M15.3202 20.1849L21.0128 17L15.3202 13.8151V20.1849Z"
+                ></path>
+                <path
+                  d="M17.5 0C7.83649 0 0 7.61259 0 17C0 26.3874 7.83649 34 17.5 34C27.1635 34 35 26.3874 35 17C35 7.61259 27.1635 0 17.5 0ZM28.4348 17.0174C28.4348 17.0174 28.4348 20.4651 27.9846 22.1275C27.7323 23.0375 26.9937 23.755 26.0569 23.9999C24.3456 24.4375 17.5 24.4375 17.5 24.4375C17.5 24.4375 10.6723 24.4375 8.94306 23.9825C8.00632 23.7376 7.26772 23.0199 7.01538 22.1099C6.5649 20.4651 6.5649 17 6.5649 17C6.5649 17 6.5649 13.5526 7.01538 11.8901C7.26746 10.9801 8.02422 10.245 8.94306 10.0001C10.6544 9.5625 17.5 9.5625 17.5 9.5625C17.5 9.5625 24.3456 9.5625 26.0569 10.0175C26.9937 10.2624 27.7323 10.9801 27.9846 11.8901C28.453 13.5526 28.4348 17.0174 28.4348 17.0174Z"
+                ></path>
+              </svg>
+            </a>
+            <a href="https://t.me/revivlchurch" target="_blank">
+              <svg
+                class="socials__icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 34 34"
+              >
+                <path
+                  d="M17 34C26.3911 34 34 26.3911 34 17C34 7.60892 26.3911 0 17 0C7.60892 0 0 7.60892 0 17C0 26.3911 7.60892 34 17 34ZM7.77892 16.6317L24.1698 10.3119C24.9305 10.0371 25.5949 10.4975 25.3484 11.6478L25.3498 11.6464L22.559 24.7945C22.3522 25.7267 21.7983 25.9533 21.0233 25.5142L16.7733 22.3819L14.7234 24.3568C14.4967 24.5834 14.3055 24.7747 13.8663 24.7747L14.1681 20.4496L22.0447 13.3337C22.3876 13.0319 21.9682 12.8619 21.5163 13.1623L11.7824 19.2907L7.58625 17.9817C6.67533 17.6927 6.6555 17.0708 7.77892 16.6317Z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <div class="copy">Церква Відродження <span id="year"></span></div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="modal1" class="modal is-hidden">
+      <div class="modal-content-serv">
+        <div class="modal-desc">
+          <img
+            src="./images/ministries/child.webp"
+            alt="grid1"
+            class="serv-modal"
+            loading="lazy"
+          />
+
+          <h1 class="serv-h">Дитяча недільна школа</h1>
+          <p class="serv-p">
+            Цікаві та розвивальні заняття для дітей, що проходять під час
+            недільного зібрання. Через історії з Біблії, ігри та творчість діти
+            знайомляться з добром, любов’ю, чесністю та іншими моральними
+            цінностями у дружній і турботливій атмосфері.
+          </p>
+          <p class="serv-p contact h">Контакти:</p>
+          <p class="serv-p contact">
+            Наталія Школенко,&nbsp;
+            <a href="tel:+380930714645">+380 93 071 46 45</a>
+          </p>
+
+          <svg
+            class="modal-btn-close__icon close serv-close"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 34 34"
+          >
+            <path
+              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div id="modal-yl" class="modal is-hidden">
+      <div class="modal-content-serv">
+        <div class="modal-desc">
+          <img
+            src="./images/ministries/younglife.webp"
+            alt="Підлітковий клуб YL інфо"
+            class="serv-modal"
+            loading="lazy"
+            width="800"
+            height="400"
+          />
+
+          <h1 class="serv-h">Підлітковий клуб YL</h1>
+          <p class="serv-p">
+            Молодіжне служіння Young Life — це простір для підлітків і молоді,
+            де можна знайти друзів, весело провести час і поговорити на важливі
+            теми. Через ігри, спілкування, музику та відкриті розмови ми разом
+            шукаємо відповіді на життєві питання та відкриваємо для себе
+            справжні цінності.
+          </p>
+          <p class="serv-p contact h">Контакти:</p>
+          <p class="serv-p contact">
+            Антоніо Тортоса Кузнєцов,&nbsp;<a href="tel:+380673034180"
+              >+380 67 303 41 80</a
+            >
+          </p>
+
+          <svg
+            class="modal-btn-close__icon close serv-close"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 34 34"
+          >
+            <path
+              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div id="modal-revival" class="modal is-hidden">
+      <div class="modal-content-serv">
+        <div class="modal-desc">
+          <img
+            src="./images/ministries/revyouth.webp"
+            alt="Молодіжні зустрічі Revival інфо"
+            class="serv-modal"
+            loading="lazy"
+            width="800"
+            height="400"
+          />
+
+          <h1 class="serv-h">Молодіжні зустрічі Revival</h1>
+          <p class="serv-p">
+            Тепла й неформальна вечерка для спілкування, відпочинку та
+            натхнення. Ми збираємось, щоб разом поїсти, поспілкуватись, пограти
+            і подумати над важливими темами життя, віри й дружби. Це місце, де
+            кожен знайде підтримку, прийняття та справжніх друзів.
+          </p>
+          <p class="serv-p contact h">Контакти:</p>
+          <p class="serv-p contact">
+            Антоніо Тортоса Кузнєцов,&nbsp;<a href="tel:+380673034180"
+              >+380 67 303 41 80</a
+            >
+          </p>
+
+          <svg
+            class="modal-btn-close__icon close serv-close"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 34 34"
+          >
+            <path
+              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div id="modal-family" class="modal is-hidden">
+      <div class="modal-content-serv">
+        <div class="modal-desc">
+          <img
+            src="./images/ministries/family.webp"
+            alt="Сімейне служіння інфо"
+            class="serv-modal"
+            loading="lazy"
+            width="800"
+            height="400"
+          />
+
+          <h1 class="serv-h">Сімейне служіння</h1>
+          <p class="serv-p">
+            Зустрічі для тих, хто вже у шлюбі, де ми ділимося досвідом, вчимося
+            глибше розуміти одне одного й розвивати здорові стосунки. У теплій
+            атмосфері говоримо про любов, повагу, віру та підтримку в щоденному
+            сімейному житті.
+          </p>
+          <p class="serv-p contact h">Контакти:</p>
+          <p class="serv-p contact">
+            Олександр Волошок,&nbsp;<a href="tel:+380974919263"
+              >+380 97 491 92 63</a
+            >
+          </p>
+
+          <svg
+            class="modal-btn-close__icon close serv-close"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 34 34"
+          >
+            <path
+              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div id="modal-mil" class="modal is-hidden">
+      <div class="modal-content-serv">
+        <div class="modal-desc">
+          <img
+            src="./images/ministries/milit.webp"
+            alt="Зустрічі для сімей військових інфо"
+            class="serv-modal"
+            loading="lazy"
+            width="800"
+            height="400"
+          />
+
+          <h1 class="serv-h">Зустрічі для сімей військових</h1>
+          <p class="serv-p">
+            Простір підтримки, взаєморозуміння та спільної молитви. Ми
+            збираємось, щоб ділитись переживаннями, зміцнювати віру та надихати
+            одне одного у непростий час. Тут родини знаходять тепло, турботу та
+            надію серед однодумців.
+          </p>
+          <p class="serv-p contact h">Контакти:</p>
+          <p class="serv-p contact">
+            Світлана Волошок,&nbsp;<a href="tel:+380978200103"
+              >+380 97 820 01 03</a
+            >
+          </p>
+
+          <svg
+            class="modal-btn-close__icon close serv-close"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 34 34"
+          >
+            <path
+              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div id="modal-pray" class="modal is-hidden">
+      <div class="modal-content-serv">
+        <div class="modal-desc">
+          <img
+            src="./images/ministries/pray.webp"
+            alt="Молитовні зустрічі інфо"
+            class="serv-modal"
+            loading="lazy"
+            width="800"
+            height="400"
+          />
+
+          <h1 class="serv-h">Молитовні зустрічі</h1>
+          <p class="serv-p">
+            Молитовні зустрічі — це особливий час єдності з Богом і між собою.
+            Ми збираємось у спокійній атмосфері, щоб дякувати, просити,
+            підтримувати одне одного в молитві та шукати Божу волю. Це місце
+            сили, миру й духовного відновлення для кожного.
+          </p>
+          <p class="serv-p contact h">Контакти:</p>
+          <p class="serv-p contact">
+            Роман Страхов,&nbsp;<a href="tel:+380664730573"
+              >+380 66 473 05 73</a
+            >
+          </p>
+
+          <svg
+            class="modal-btn-close__icon close serv-close"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 34 34"
+          >
+            <path
+              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div id="modal-conf" class="modal is-hidden">
+      <div class="modal-content-serv">
+        <div class="modal-desc">
+          <img
+            src="./images/ministries/conf.webp"
+            alt="Молодіжні конференції інфо"
+            class="serv-modal"
+            loading="lazy"
+            width="800"
+            height="400"
+          />
+
+          <h1 class="serv-h">Молодіжні конференції</h1>
+          <p class="serv-p">
+            Події, що об’єднують молодь для натхнення, глибоких роздумів і нових
+            знайомств. Через спікерів, прославлення, практичні теми та живе
+            спілкування ми разом зростаємо у вірі, лідерстві та покликанні в
+            сучасному світі.
+          </p>
+          <p class="serv-p contact h">Контакти:</p>
+          <p class="serv-p contact">
+            Антоніо Тортоса Кузнєцов,&nbsp;<a href="tel:+380673034180"
+              >+380 67 303 41 80</a
+            >
+          </p>
+
+          <svg
+            class="modal-btn-close__icon close serv-close"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 34 34"
+          >
+            <path
+              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div id="modal-women" class="modal is-hidden">
+      <div class="modal-content-serv">
+        <div class="modal-desc">
+          <img
+            src="./images/ministries/woman.webp"
+            alt="Жіночі клуби інфо"
+            class="serv-modal"
+            loading="lazy"
+            width="800"
+            height="400"
+          />
+
+          <h1 class="serv-h">Жіночі клуби</h1>
+          <p class="serv-p">
+            Теплі зустрічі для жінок, де можна відпочити душею, поспілкуватися,
+            поділитися досвідом і надихнутись. У невимушеній атмосфері говоримо
+            про життя, віру, сім’ю та саморозвиток, підтримуючи одна одну на
+            шляху до внутрішньої сили й гармонії.
+          </p>
+          <p class="serv-p contact h">Контакти:</p>
+          <p class="serv-p contact">
+            Світлана Зеленова,&nbsp;<a href="tel:+380992042162"
+              >+380 99 204 21 62</a
+            >
+          </p>
+
+          <svg
+            class="modal-btn-close__icon close serv-close"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 34 34"
+          >
+            <path
+              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div id="modal-men" class="modal is-hidden">
+      <div class="modal-content-serv">
+        <div class="modal-desc">
+          <img
+            src="./images/ministries/man.webp"
+            alt="Чоловічі клуби інфо"
+            class="serv-modal"
+            loading="lazy"
+            width="800"
+            height="400"
+          />
+
+          <h1 class="serv-h">Чоловічі клуби</h1>
+          <p class="serv-p">
+            Зустрічі для чоловіків, де в дружній атмосфері ми говоримо про
+            справжнє лідерство, віру, відповідальність і життєві виклики. Це час
+            для чесного спілкування, взаємної підтримки, духовного зростання та
+            розвитку як чоловіків, батьків і друзів.
+          </p>
+          <p class="serv-p contact h">Контакти:</p>
+          <p class="serv-p contact">
+            Віталій Окунь,&nbsp;<a href="tel:+380662070404"
+              >+380 66 207 04 04</a
+            >
+          </p>
+
+          <svg
+            class="modal-btn-close__icon close serv-close"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 34 34"
+          >
+            <path
+              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div id="modal-55" class="modal is-hidden">
+      <div class="modal-content-serv">
+        <div class="modal-desc">
+          <img
+            src="./images/ministries/oldgroup.webp"
+            alt="Служіння 55+ інфо"
+            class="serv-modal"
+            loading="lazy"
+            width="800"
+            height="400"
+          />
+
+          <h1 class="serv-h">Служіння 55+</h1>
+          <p class="serv-p">
+            Зустрічі для людей старшого віку, де панує тепло, повага й щире
+            спілкування. Ми разом молимось, підтримуємо одне одного, ділимось
+            життєвою мудрістю та натхненням. Це простір радості, турботи й
+            активного духовного життя у колі друзів.
+          </p>
+          <p class="serv-p contact h">Контакти:</p>
+          <p class="serv-p contact">
+            Світлана Кравецька,&nbsp;<a href="tel:+380687556020"
+              >+380 68 755 60 20</a
+            >
+          </p>
+
+          <svg
+            class="modal-btn-close__icon close serv-close"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 34 34"
+          >
+            <path
+              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div id="modal-lgroups" class="modal is-hidden">
+      <div class="modal-content-serv">
+        <div class="modal-desc">
+          <img
+            src="./images/ministries/littlegr.webp"
+            alt="Малі групи розбору Біблії інфо"
+            class="serv-modal"
+            loading="lazy"
+            width="800"
+            height="400"
+          />
+
+          <h1 class="serv-h">Малі групи розбору Біблії</h1>
+          <p class="serv-p">
+            Зустрічі в невеликих колах, де разом читаємо, обговорюємо та глибше
+            розуміємо Слово Боже. У затишній атмосфері ділимося думками,
+            підтримуємо одне одного в вірі та зростаємо духовно через живе
+            спілкування й молитву.
+          </p>
+          <p class="serv-p contact h">Контакти:</p>
+          <p class="serv-p contact">
+            Ерік Бринза,&nbsp;<a href="tel:+380681829996">+380 68 182 99 96 </a>
+          </p>
+
+          <svg
+            class="modal-btn-close__icon close serv-close"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 34 34"
+          >
+            <path
+              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div id="modal-sunday" class="modal is-hidden">
+      <div class="modal-content-serv">
+        <div class="modal-desc">
+          <img
+            src="./images/ministries/sunday.webp"
+            alt="Недільні зібрання інфо"
+            class="serv-modal"
+            loading="lazy"
+            width="800"
+            height="400"
+          />
+
+          <h1 class="serv-h">Недільні зібрання</h1>
+          <p class="serv-p">
+            Центральна подія тижня, де вся церква збирається разом для спільної
+            молитви, прославлення Бога та почуття єдності. Через проповідь, спів
+            і Слово ми черпаємо силу, натхнення й оновлення для щоденного життя.
+          </p>
+          <p class="serv-p contact h">Контакти:</p>
+          <p class="serv-p contact">
+            Яків Бринза,&nbsp;<a class="serv-p" href="tel:+380979111258"
+              >+380 97 911 12 58</a
+            >
+          </p>
+
+          <svg
+            class="modal-btn-close__icon close serv-close"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 34 34"
+          >
+            <path
+              d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+   
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <svg
+        class="top-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+      >
+        <path
+          d="M9 3.828l-6.071 6.071-1.414-1.414 8.485-8.485 8.485 8.485-1.414 1.414-6.071-6.071v16.172h-2v-16.172z"
+        ></path>
+      </svg>
+    </button>
+    <script src="./js/footer.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/top.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+  </body>
+</html>
